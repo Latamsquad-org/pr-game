@@ -1,0 +1,13 @@
+{
+  "servers_visible": [1, 2, 3, 4],
+  "sort": "newest",
+  "tab_2d": "PRdemos 2D",
+  "tab_3d": "BF2demos 3D",
+  "server_label": "Servidor",
+  "server_names": {
+    "1": "[LATAMSQUAD] #1 Mapas Mixtos - latamsquad.org",
+    "2": "[LATAMSQUAD] #2 Ranking - EnemyVOIP - Tesoros - latamsquad.org",
+    "3": "[LATAMSQUAD] #3 Cooperativo - latamsquad.org",
+    "4": "[LATAMSQUAD] #4 Eventos - latamsquad.org"
+  }
+}

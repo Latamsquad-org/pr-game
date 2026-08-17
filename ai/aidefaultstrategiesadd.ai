@@ -1,0 +1,16 @@
+rem *** PRSP Ai v5 ***
+
+rem *** Add Strategies ***
+
+rem --- Team 1 ---
+ai.addSAIStrategy 1 AttackEnemyCP
+ai.addSAIStrategy 1 AttackEnemyArea
+ai.addSAIStrategy 1 AttackNeutralArea
+ai.addSAIStrategy 1 Defend
+
+rem --- Team 2 ---
+ai.addSAIStrategy 2 AttackEnemyCP
+ai.addSAIStrategy 2 AttackEnemyArea
+ai.addSAIStrategy 2 AttackNeutralArea
+ai.addSAIStrategy 2 Defend
+

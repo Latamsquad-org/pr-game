@@ -1,0 +1,198 @@
+
+rem *** Construct Plane Weights ***
+aiSettings.createBehaviourModifiers  PlaneWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct HeliMove weights ***
+aiSettings.createBehaviourModifiers  HeliMoveWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+
+
+rem *** Plane Behaviour setup ***
+
+aisettings.setVehicleMods  Plane  PlaneWeights
+aiSettings.setVehicleBehaviour  Plane  MoveTo  BBMoveTo  BBPGotoWaypoint3d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Plane  Idle  BBIdle  BBPIdle3d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Plane  Fire  BBFire3d  BBPFire3d  5  UCFire  UnitWeights
+aiSettings.setVehicleBehaviour  Plane  Change  BBChange  BBPChange  3  UCUnion  ChangeInhibit
+
+aiSettings.setVehicleDefaultBehaviour  Plane  MoveTo
+
+aiSettings.addInterpreterEntry  Plane  InfoWrapper
+aiSettings.addInterpreterEntry  Plane  PlaneMoveTo
+aiSettings.addInterpreterEntry  Plane  PlaneMoveToDirection
+aiSettings.addInterpreterEntry  Plane  PlaneMoveToObject
+aiSettings.addInterpreterEntry  Plane  Trigger
+aiSettings.addInterpreterEntry  Plane  TriggerContinously
+aiSettings.addInterpreterEntry  Plane  PlaneAimAt
+aiSettings.addInterpreterEntry  Plane  PlaneResetControls
+aiSettings.addInterpreterEntry  Plane  Sense
+aiSettings.activateDefaultInterpreter  Plane  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  Plane  BAPSTEvaluateCondition  Full
+
+
+
+rem ***** HeliBehaviour setup ***
+
+aisettings.setVehicleMods  Helicopter  HeliMoveWeights
+aiSettings.setVehicleBehaviour  Helicopter  MoveTo  BBMoveTo  BBPGotoWaypoint3d  4  UCUnion  HeliMoveWeights
+aiSettings.setVehicleBehaviour  Helicopter  Idle  BBIdle  BBPIdle3d  0.001  UCUnion  HeliMoveWeights
+aiSettings.setVehicleBehaviour  Helicopter  Fire  BBFire3d  BBPHeliFire3d  5  UCFire  HeliMoveWeights
+aiSettings.setVehicleBehaviour  Helicopter  Change  BBChange  BBPChange  3  UCUnion  ChangeInhibit
+
+aiSettings.setVehicleDefaultBehaviour  Helicopter  MoveTo
+
+aiSettings.addInterpreterEntry  Helicopter  InfoWrapper
+aiSettings.addInterpreterEntry  Helicopter  HeliMoveTo
+aiSettings.addInterpreterEntry  Helicopter  PlaneMoveToDirection
+aiSettings.addInterpreterEntry  Helicopter  PlaneMoveToObject
+aiSettings.addInterpreterEntry  Helicopter  HeliMoveAwayFromObject
+aiSettings.addInterpreterEntry  Helicopter  Trigger
+aiSettings.addInterpreterEntry  Helicopter  TriggerContinously
+aiSettings.addInterpreterEntry  Helicopter  HeliAimAt
+aiSettings.addInterpreterEntry  Helicopter  HeliResetControls
+aiSettings.addInterpreterEntry  Helicopter  Sense
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  Helicopter  BAPSTEvaluateCondition  Full
+
+
+
+rem ***** TransportHelicopterBehaviour setup ***
+
+aisettings.setVehicleMods  TransportHelicopter  HeliMoveWeights
+aiSettings.setVehicleBehaviour  TransportHelicopter  MoveTo  BBMoveTo  BBPGotoWaypoint3d  4  UCUnion  HeliMoveWeights
+aiSettings.setVehicleBehaviour  TransportHelicopter  Idle  BBIdle  BBPIdle3d  0.001  UCUnion  HeliMoveWeights
+aiSettings.setVehicleBehaviour  TransportHelicopter  Change  BBChange  BBPChange  3  UCUnion  ChangeInhibit
+
+aiSettings.setVehicleDefaultBehaviour  TransportHelicopter  MoveTo
+
+aiSettings.addInterpreterEntry  TransportHelicopter  InfoWrapper
+aiSettings.addInterpreterEntry  TransportHelicopter  HeliMoveTo
+aiSettings.addInterpreterEntry  TransportHelicopter  HeliMoveToDirection
+aiSettings.addInterpreterEntry  TransportHelicopter  HeliMoveToObject
+aiSettings.addInterpreterEntry  TransportHelicopter  HeliMoveAwayFromObject
+aiSettings.addInterpreterEntry  TransportHelicopter  Trigger
+aiSettings.addInterpreterEntry  TransportHelicopter  TriggerContinously
+aiSettings.addInterpreterEntry  TransportHelicopter  HeliAimAt
+aiSettings.addInterpreterEntry  TransportHelicopter  HeliResetControls
+aiSettings.addInterpreterEntry  TransportHelicopter  Sense
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTLookAtWrapper  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  TransportHelicopter  BAPSTEvaluateCondition  Full
+
+
+
+rem ***** VTOLTransport Behaviour setup ***
+
+aisettings.setVehicleMods  VTOLTransport  HeliMoveWeights
+aiSettings.setVehicleBehaviour  VTOLTransport  Avoid  BBAvoid  BBPAvoidCollision3d  9  UCUnion  PlaneWeights
+aiSettings.setVehicleBehaviour  VTOLTransport  MoveTo  BBMoveTo  BBPGotoWaypoint3d  4  UCUnion  HeliMoveWeights
+aiSettings.setVehicleBehaviour  VTOLTransport  Idle  BBIdle  BBPIdle3d  0.001  UCUnion  HeliMoveWeights
+aiSettings.setVehicleBehaviour  VTOLTransport  Change  BBChangeLandingCraft  BBPChange  3  UCUnion  ChangeInhibit
+
+aiSettings.setVehicleDefaultBehaviour  VTOLTransport  MoveTo
+
+aiSettings.addInterpreterEntry  VTOLTransport  InfoWrapper
+aiSettings.addInterpreterEntry  VTOLTransport  HeliMoveTo
+aiSettings.addInterpreterEntry  VTOLTransport  PlaneMoveToDirection
+aiSettings.addInterpreterEntry  VTOLTransport  PlaneMoveToObject
+aiSettings.addInterpreterEntry  VTOLTransport  HeliMoveAwayFromObject
+aiSettings.addInterpreterEntry  VTOLTransport  Trigger
+aiSettings.addInterpreterEntry  VTOLTransport  TriggerContinously
+aiSettings.addInterpreterEntry  VTOLTransport  PlaneAimAt
+aiSettings.addInterpreterEntry  VTOLTransport  HeliResetControls
+aiSettings.addInterpreterEntry  VTOLTransport  Sense
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  VTOLTransport  BAPSTEvaluateCondition  Full

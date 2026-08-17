@@ -1,0 +1,22 @@
+<map>
+	<name> Kokan </name>
+	<music> common/sound/menu/music/load/piratex_hunting.ogg </music>
+	<modes>
+		<mode type="gpm_skirmish">
+			<maptype players="16" type="skirmish" locid="GAMEMODE_DESCRIPTION_skirmish"></maptype>
+			<maptype players="64" type="skirmish" locid="GAMEMODE_DESCRIPTION_skirmish"></maptype>
+		</mode>
+		<mode type="gpm_insurgency">
+			<maptype players="16" type="insurgency" locid="GAMEMODE_DESCRIPTION_insurgency"></maptype>
+			<maptype players="32" type="insurgency" locid="GAMEMODE_DESCRIPTION_insurgency"></maptype>
+			<maptype players="64" type="insurgency" locid="GAMEMODE_DESCRIPTION_insurgency"></maptype>
+			<maptype players="128" type="insurgency" locid="GAMEMODE_DESCRIPTION_insurgency"></maptype>
+		</mode>
+		<mode type="gpm_coop">
+			<maptype ai="1" players="16" type="coopinfantry" locid="GAMEMODE_DESCRIPTION_coopinfantry"></maptype>
+			<maptype ai="1" players="32" type="coopalternative" locid="GAMEMODE_DESCRIPTION_coopalternative"></maptype>
+			<maptype ai="1" players="64" type="coopfullassets" locid="GAMEMODE_DESCRIPTION_coopfullassets"></maptype>
+			<maptype ai="1" players="128" type="coopfulllarge" locid="GAMEMODE_DESCRIPTION_coopfulllarge"></maptype>
+		</mode>
+	</modes>
+</map>

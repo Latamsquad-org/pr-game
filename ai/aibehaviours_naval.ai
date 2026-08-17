@@ -1,0 +1,210 @@
+
+rem *** Construct Boat Weights ***
+aiSettings.createBehaviourModifiers  BoatWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct SmallBoat Weights ***
+aiSettings.createBehaviourModifiers  SmallBoatWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct LandingCraft Weights ***
+aiSettings.createBehaviourModifiers  LandingCraftWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+
+
+rem *** Boat Behaviour setup ***
+
+aisettings.setVehicleMods  Boat  BoatWeights
+aiSettings.setVehicleMaterialCost  Boat  Ground  -1
+aiSettings.setVehicleMaterialCost  Boat  Road  -1
+aiSettings.setVehicleMaterialCost  Boat  Shallows  1
+aiSettings.setVehicleMaterialCost  Boat  DeepWater  0.5
+aiSettings.setVehicleBehaviour  Boat  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  Boat  MoveTo  BBMoveTo  BBPGotoWaypoint2d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Boat  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Boat  Fire  BBFireLargeBore  BBPFire2d  5  UCFire  UnitWeights
+aiSettings.setVehicleBehaviour  Boat  Change  BBChangeTeleport  BBPChangeTeleport  3  UCUnion  ChangeInhibit
+
+aiSettings.setVehicleDefaultBehaviour  Boat  MoveTo
+
+aiSettings.addInterpreterEntry  Boat  InfoWrapper
+aiSettings.addInterpreterEntry  Boat  BoatMoveTo
+aiSettings.addInterpreterEntry  Boat  BoatMoveToDirection
+aiSettings.addInterpreterEntry  Boat  BoatMoveToObject
+aiSettings.addInterpreterEntry  Boat  Trigger
+aiSettings.addInterpreterEntry  Boat  TriggerContinously
+aiSettings.addInterpreterEntry  Boat  MouseTurretLookAt
+aiSettings.addInterpreterEntry  Boat  MouseTurretAimAt
+aiSettings.addInterpreterEntry  Boat  Sense
+aiSettings.addInterpreterEntry  Boat  BoatResetControls
+aiSettings.activateDefaultInterpreter  Boat  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTLookAtWrapper  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  Boat  BAPSTEvaluateCondition  Full
+
+
+
+rem *** Small Boat Behaviour setup ***
+
+aisettings.setVehicleMods  SmallBoat  SmallBoatWeights
+aiSettings.setVehicleMaterialCost  SmallBoat  Ground  100
+aiSettings.setVehicleMaterialCost  SmallBoat  Road  100
+aiSettings.setVehicleMaterialCost  SmallBoat  Shallows  1
+aiSettings.setVehicleMaterialCost  SmallBoat  DeepWater  0.5
+aiSettings.setVehicleBehaviour  SmallBoat  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  SmallBoat  MoveTo  BBMoveTo  BBPGotoWaypoint2d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  SmallBoat  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  SmallBoat  Change  BBChange  BBPChange  3  UCUnion  ChangeInhibit
+aiSettings.setVehicleBehaviour  SmallBoat  Fire  BBFireInfantery  BBPFireInfantery  5  UCFire  UnitWeights
+aiSettings.setVehicleBehaviour  SmallBoat  Special2  BBBridgeRepair  BBPBridgeRepair  7  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  SmallBoat  Special3  BBDefuseMines  BBPDefuseMines  6  UCUnion  UnitWeights
+
+aiSettings.setVehicleDefaultBehaviour  SmallBoat  MoveTo
+
+aiSettings.addInterpreterEntry  SmallBoat  BoatResetControls
+rem  aiSettings.addInterpreterEntry  SmallBoat  MoveToMedium  Medium
+rem  aiSettings.addInterpreterEntry  SmallBoat  MoveToObjectMedium  Medium
+aiSettings.addInterpreterEntry  SmallBoat  MoveToMediumBoat  Medium
+aiSettings.addInterpreterEntry  SmallBoat  MoveToObjectMediumBoat  Medium
+aiSettings.addInterpreterEntry  SmallBoat  InfoWrapper
+aiSettings.addInterpreterEntry  SmallBoat  CarMoveTo
+aiSettings.addInterpreterEntry  SmallBoat  CarMoveToDirection
+aiSettings.addInterpreterEntry  SmallBoat  CarMoveToObject
+aiSettings.addInterpreterEntry  SmallBoat  Trigger
+aiSettings.addInterpreterEntry  SmallBoat  TriggerContinously
+aiSettings.addInterpreterEntry  SmallBoat  MouseTurretAimAt
+aiSettings.addInterpreterEntry  SmallBoat  MouseTurretLookAt
+aiSettings.addInterpreterEntry  SmallBoat  Sense
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTOverrideSensingAgent  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTMergeSoldierInputs  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTLookAtWrapper  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  SmallBoat  BAPSTEvaluateCondition  Full
+aiSettings.addSensingAgentPattern  SmallBoat  Turret
+
+
+
+rem *** LandingCraft Behaviour setup ***
+
+aisettings.setVehicleMods  LandingCraft  LandingCraftWeights
+aiSettings.setVehicleMaterialCost  LandingCraft  Ground  10
+aiSettings.setVehicleMaterialCost  LandingCraft  Road  10
+aiSettings.setVehicleMaterialCost  LandingCraft  Shallows  2
+aiSettings.setVehicleMaterialCost  LandingCraft  DeepWater  1
+aiSettings.setVehicleBehaviour  LandingCraft  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  LandingCraft  MoveTo  BBMoveTo  BBPGotoWaypointBoat  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  LandingCraft  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  LandingCraft  Fire  BBFireUnarmed  UnRelated  5  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  LandingCraft  Change  BBChangeLandingCraft  BBPChangeLandingCraft  3  UCUnion  ChangeInhibit
+
+aiSettings.setVehicleDefaultBehaviour  LandingCraft  MoveTo
+
+aiSettings.addInterpreterEntry  LandingCraft  MoveToMediumBoat  Medium
+aiSettings.addInterpreterEntry  LandingCraft  MoveToObjectMediumBoat  Medium
+aiSettings.addInterpreterEntry  LandingCraft  CarMoveTo
+aiSettings.addInterpreterEntry  LandingCraft  CarMoveToDirection
+aiSettings.addInterpreterEntry  LandingCraft  CarMoveToObject
+aiSettings.addInterpreterEntry  LandingCraft  Trigger
+aiSettings.addInterpreterEntry  LandingCraft  TriggerContinously
+aiSettings.addInterpreterEntry  LandingCraft  MouseTurretLookAt
+aiSettings.addInterpreterEntry  LandingCraft  BoatResetControls
+aiSettings.addInterpreterEntry  LandingCraft  Sense
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTInfoWrapper  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTPhysicsEnable  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTLookAtWrapper  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  LandingCraft  BAPSTUseFlareOnMissileLock  Full
+aiSettings.addSensingAgentPattern  LandingCraft  Turret

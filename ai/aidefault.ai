@@ -1,0 +1,27 @@
+rem *** PRSP Ai v5 ***
+
+echo **************************************************************************
+echo ********************PROJECT****REALITY****AI****LOADED********************
+echo **************************************************************************
+
+aiSettings.setNSides 2
+aiSettings.setAutoSpawnBots 1
+
+rem aiSettings.setMaxNBots 64
+rem aiSettings.maxBotsIncludeHumans 1
+rem aiSettings.setBotSkill 0.4
+
+rem To override the amount of bots used in PRSP, use the following lines instead of the three lines above.
+rem This will render the ingame menu and serversettings.con bot settings not used, as the following lines
+rem of code overrides those settings.
+rem Just remove the "rem" in front of the lines to make it read by the game, then edit the numbers as needed.
+
+rem aiSettings.overrideMenuSettings 1
+aiSettings.setMaxNBots 48
+aiSettings.maxBotsIncludeHumans 0
+aiSettings.setBotSkill 0.9
+
+run botnames.ai
+aiSettings.setInformationGridDimension 48
+rem aiDebug.draw 1
+run aipathfinding.ai

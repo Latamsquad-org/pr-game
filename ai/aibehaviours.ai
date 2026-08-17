@@ -1,0 +1,163 @@
+rem *** PRSP Ai v5 ***
+rem *** Set number of behaviours and id/name mappings ***
+
+rem Change is the ability for bots to exit the vehicle. 
+rem Removing the line that starts with aiSettings.setVehicleBehaviour (Vehicle) Change BBChange will prevent bots from exiting a vehicle even with the Comma Rose option
+rem To prevent bots from leaving the vehicle when close to a Capture Point, make sure the ParatrooperFixed is not set as aiTemplatePlugIn.equipmentTypeName for the Objects.ai
+
+aiSettings.setMaxNumberOfBehaviours  13
+
+aiSettings.setBehaviour  0  Avoid
+aiSettings.setBehaviour  1  MoveTo
+aiSettings.setBehaviour  2  Idle
+aiSettings.setBehaviour  3  Fire
+aiSettings.setBehaviour  4  TakeCover
+aiSettings.setBehaviour  5  Change
+aiSettings.setBehaviour  6  Special
+aiSettings.setBehaviour  7  Revive
+aiSettings.setBehaviour  8  c4
+aiSettings.setBehaviour  9  Special2
+aiSettings.setBehaviour  10  Special3
+aiSettings.setBehaviour  11  Random
+aiSettings.setBehaviour  12  Triggerable
+
+
+rem *** Set number of vehicles and id/name mappings ***
+aiSettings.setVehicle  Tank
+aiSettings.setVehicle  Plane
+aiSettings.setVehicle  Boat
+aiSettings.setVehicle  SmallBoat
+aiSettings.setVehicle  Infantery
+aiSettings.setVehicle  Fixed
+aiSettings.setVehicle  Car
+aiSettings.setVehicle  Bombcar
+aiSettings.setVehicle  LandingCraft
+aiSettings.setVehicle  Passenger
+aiSettings.setVehicle  LandingCraftPassenger
+aiSettings.setVehicle  LandingCraftFixed
+aiSettings.setVehicle  Helicopter
+aiSettings.setVehicle  TransportHelicopter
+aiSettings.setVehicle  ArmedCar
+aiSettings.setVehicle  ManDown
+aiSettings.setVehicle  ParatrooperFixed
+aiSettings.setVehicle  FixedTurret
+aiSettings.setVehicle  TankCommander
+aiSettings.setVehicle  APCCommander
+aiSettings.setVehicle  APCACommander
+aiSettings.setVehicle  VTOLTransport
+
+aiSettings.setVehicleClusterMapping  Tank  Tank
+aiSettings.setVehicleClusterMapping  Boat  LandingCraft
+aiSettings.setVehicleClusterMapping  Infantery  Infantery
+aiSettings.setVehicleClusterMapping  Car  Tank
+aiSettings.setVehicleClusterMapping  Bombcar  Tank
+aiSettings.setVehicleClusterMapping  LandingCraft  LandingCraft
+aiSettings.setVehicleClusterMapping  ArmedCar  ArmedCar
+aiSettings.setVehicleClusterMapping  SmallBoat  ArmedCar
+aiSettings.setVehicleClusterMapping  TankCommander  Tank
+aiSettings.setVehicleClusterMapping  APCCommander  ArmedCar
+aiSettings.setVehicleClusterMapping  APCACommander  ArmedCar
+
+rem *** Set Sensing Agent Patterns id/name mappings ***
+aiSettings.setSensingAgentPatternName  Turret
+aiSettings.setSensingAgentPatternName  MouseFreeLook
+aiSettings.setSensingAgentPatternName  Soldier
+aiSettings.setSensingAgentPatternName  Null
+aiSettings.setSensingAgentNullPattern  Null
+
+aiSettings.setManDownEquipment  ManDown
+
+rem *** IMPORTANT !!! **************************
+rem * NEVER ALLOW IDLE's urgency to become 0.0 *
+rem * The AI will CRASH in that case. *
+rem *** REMINDER *******************************
+
+rem *** Construct Unit Weights ***
+aiSettings.createBehaviourModifiers  UnitWeights
+aiSettings.setBehaviourModifier  Avoid  1.0
+aiSettings.setBehaviourModifier  MoveTo  1.0
+aiSettings.setBehaviourModifier  Idle  1.0
+aiSettings.setBehaviourModifier  Fire  1.0
+aiSettings.setBehaviourModifier  TakeCover  1.0
+aiSettings.setBehaviourModifier  Change  1.0
+aiSettings.setBehaviourModifier  Special  1.0
+aiSettings.setBehaviourModifier  Revive  1.0
+aiSettings.setBehaviourModifier  c4  1.0
+aiSettings.setBehaviourModifier  Special2  1.0
+aiSettings.setBehaviourModifier  Special3  1.0
+aiSettings.setBehaviourModifier  Random  1.0
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct Standard Weights ***
+aiSettings.createBehaviourModifiers  StandardWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct Avoid Inhibitors ***
+aiSettings.createBehaviourModifiers  AvoidInhibit
+aiSettings.setBehaviourModifier  Avoid  1.0
+aiSettings.setBehaviourModifier  MoveTo  0.3
+aiSettings.setBehaviourModifier  Idle  1.0
+aiSettings.setBehaviourModifier  Fire  1.0
+aiSettings.setBehaviourModifier  TakeCover  1.0
+aiSettings.setBehaviourModifier  Change  1.0
+aiSettings.setBehaviourModifier  Special  0.5
+aiSettings.setBehaviourModifier  Revive  1.0
+aiSettings.setBehaviourModifier  c4  1.0
+aiSettings.setBehaviourModifier  Special2  1.0
+aiSettings.setBehaviourModifier  Special3  1.0
+aiSettings.setBehaviourModifier  Random  1.0
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct Change Inhibit ***
+aiSettings.createBehaviourModifiers  ChangeInhibit
+aiSettings.setBehaviourModifier  Avoid  0.8
+aiSettings.setBehaviourModifier  MoveTo  0.0
+aiSettings.setBehaviourModifier  Idle  0.01
+aiSettings.setBehaviourModifier  Fire  0.75
+aiSettings.setBehaviourModifier  TakeCover  1.0
+aiSettings.setBehaviourModifier  Change  1.0
+aiSettings.setBehaviourModifier  Special  0.0
+aiSettings.setBehaviourModifier  Revive  1.0
+aiSettings.setBehaviourModifier  c4  1.0
+aiSettings.setBehaviourModifier  Special2  1.0
+aiSettings.setBehaviourModifier  Special3  1.0
+aiSettings.setBehaviourModifier  Random  1.0
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Set basic weights for bot behaviour ***
+aiSettings.setBasicBotWeights  UnitWeights
+aiSettings.setStandardPersonality  UnitWeights  1
+aiSettings.setStandardPersonality  UnitWeights  2
+
+
+
+rem ************************* Vehicle behaviour setup ******************************
+
+aiSettings.createUCConstant  UCUnion  1.0
+aiSettings.createUCLinear  UCFire  -0.22  1.3
+aiSettings.createUCLinear  UCCallForMedic  0.1  1
+aiSettings.createUCXInverse  UCScout  2.5  0.9  1.0  0.5
+
+aiSettings.createUCLinear  UCTakeCoverInfantery  -0.5  1.5
+aiSettings.createUCLinear  UCReviveLinear  -1  10
+aiSettings.createUCLinear  UCMedicAssistLinear  -1  9
+
+rem *** Include AI ***
+include aibehaviours_air.ai
+include aibehaviours_cars.ai
+include aibehaviours_fixed.ai
+include aibehaviours_ground.ai
+include aibehaviours_infantry.ai
+include aibehaviours_naval.ai

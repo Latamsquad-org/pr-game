@@ -1,0 +1,300 @@
+
+rem *** Construct Tank Weights ***
+aiSettings.createBehaviourModifiers  TankWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct TankCommander Weights ***
+aiSettings.createBehaviourModifiers  TankCommanderWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct APCCommander Weights ***
+aiSettings.createBehaviourModifiers  APCCommanderWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct APCACommander Weights ***
+aiSettings.createBehaviourModifiers  APCACommanderWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+
+
+rem *** Tank Behaviour setup ***
+
+aisettings.setVehicleMods  Tank  TankWeights
+aiSettings.setVehicleMaterialCost  Tank  Ground  1
+aiSettings.setVehicleMaterialCost  Tank  Road  1
+aiSettings.setVehicleMaterialCost  Tank  Shallows  1.2
+aiSettings.setVehicleMaterialCost  Tank  DeepWater  -1
+
+aiSettings.setVehicleBehaviour  Tank  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  Tank  MoveTo  BBMoveTo  BBPGotoWaypoint2d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Tank  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Tank  Fire  BBFireInfantery  BBPFireInfantery  5  UCFire  UnitWeights
+aiSettings.setVehicleBehaviour  Tank  Special2  BBBridgeRepair  BBPBridgeRepair  7  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Tank  Special3  BBDefuseMines  BBPDefuseMines  6  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Tank  Change  BBChange  BBPChange  3  UCUnion  ChangeInhibit
+
+aiSettings.setVehicleDefaultBehaviour  Tank  MoveTo
+
+aiSettings.addInterpreterEntry  Tank  MoveToMedium  Medium
+aiSettings.addInterpreterEntry  Tank  MoveToObjectMedium  Medium
+aiSettings.addInterpreterEntry  Tank  InfoWrapper
+aiSettings.addInterpreterEntry  Tank  TankMoveTo
+aiSettings.addInterpreterEntry  Tank  TankTurnTo
+aiSettings.addInterpreterEntry  Tank  TankMoveToDirection
+aiSettings.addInterpreterEntry  Tank  TankMoveToObject
+aiSettings.addInterpreterEntry  Tank  Trigger
+aiSettings.addInterpreterEntry  Tank  TriggerContinously
+aiSettings.addInterpreterEntry  Tank  MouseTurretAimAt
+aiSettings.addInterpreterEntry  Tank  MouseTurretLookAt
+aiSettings.addInterpreterEntry  Tank  TankResetControls
+aiSettings.addInterpreterEntry  Tank  Sense
+aiSettings.activateDefaultInterpreter  Tank  BAPSTOverrideSensingAgent  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTMergeSoldierInputs  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTLookAtWrapper  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  Tank  BAPSTEvaluateCondition  Full
+aiSettings.addSensingAgentPattern  Tank  Turret
+
+
+
+rem *** Tank Commander Behaviour setup ***
+
+aiSettings.setVehicleMaterialCost  TankCommander  Ground  1
+aiSettings.setVehicleMaterialCost  TankCommander  Road  0.2
+aiSettings.setVehicleMaterialCost  TankCommander  Shallows  1.5
+aiSettings.setVehicleMaterialCost  TankCommander  DeepWater  -1
+
+aisettings.setVehicleMods  TankCommander  TankCommanderWeights
+aiSettings.setVehicleBehaviour  TankCommander  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  TankCommander  MoveTo  BBMoveTo  BBPGotoWaypoint2d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  TankCommander  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  TankCommander  Change  BBChange  BBPChange  3  UCUnion  ChangeInhibit
+aiSettings.setVehicleBehaviour  TankCommander  Fire  BBFireUnarmed  BBPFireDriveAttack  5  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  TankCommander  Special  BBRunOverSoldier  BBPRunOverSoldier  8  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  TankCommander  Special2  BBBridgeRepair  BBPBridgeRepair  7  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  TankCommander  Special3  BBDefuseMines  BBPDefuseMines  6  UCUnion  UnitWeights
+
+aiSettings.setVehicleDefaultBehaviour  TankCommander  MoveTo
+
+aiSettings.addInterpreterEntry  TankCommander  TankResetControls
+aiSettings.addInterpreterEntry  TankCommander  MoveToMedium  Medium
+aiSettings.addInterpreterEntry  TankCommander  MoveToObjectMedium  Medium
+aiSettings.addInterpreterEntry  TankCommander  InfoWrapper
+aiSettings.addInterpreterEntry  TankCommander  TankMoveTo
+aiSettings.addInterpreterEntry  TankCommander  TankMoveToDirection
+aiSettings.addInterpreterEntry  TankCommander  TankMoveToObject
+aiSettings.addInterpreterEntry  TankCommander  Trigger
+aiSettings.addInterpreterEntry  TankCommander  TriggerContinously
+aiSettings.addInterpreterEntry  TankCommander  MouseTurretAimAt
+aiSettings.addInterpreterEntry  TankCommander  MouseTurretLookAt
+aiSettings.addInterpreterEntry  TankCommander  Sense
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTMergeSoldierInputs  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTRunOverObject  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTHonkHorn  Full
+aiSettings.activateDefaultInterpreter  TankCommander  BAPSTEvaluateCondition  Full
+
+
+
+rem *** APC Commander Behaviour setup ***
+
+aisettings.setVehicleMods  APCCommander  APCCommanderWeights
+aiSettings.setVehicleMaterialCost  APCCommander  Ground  1
+aiSettings.setVehicleMaterialCost  APCCommander  Road  1
+aiSettings.setVehicleMaterialCost  APCCommander  Shallows  1
+aiSettings.setVehicleMaterialCost  APCCommander  DeepWater  3
+
+aisettings.setVehicleMods  APCCommander  APCCommanderWeights
+aiSettings.setVehicleBehaviour  APCCommander  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  APCCommander  MoveTo  BBMoveTo  BBPGotoWaypoint2d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCCommander  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCCommander  Change  BBChange  BBPChange  3  UCUnion  ChangeInhibit
+aiSettings.setVehicleBehaviour  APCCommander  Fire  BBFireUnarmed  BBPFireDriveAttack  5  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCCommander  Special  BBRunOverSoldier  BBPRunOverSoldier  8  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCCommander  Special2  BBBridgeRepair  BBPBridgeRepair  7  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCCommander  Special3  BBDefuseMines  BBPDefuseMines  6  UCUnion  UnitWeights
+
+aiSettings.setVehicleDefaultBehaviour  APCCommander  MoveTo
+
+aiSettings.addInterpreterEntry  APCCommander  CarResetControls
+aiSettings.addInterpreterEntry  APCCommander  MoveToMedium  Medium
+aiSettings.addInterpreterEntry  APCCommander  MoveToObjectMedium  Medium
+aiSettings.addInterpreterEntry  APCCommander  InfoWrapper
+aiSettings.addInterpreterEntry  APCCommander  CarMoveTo
+aiSettings.addInterpreterEntry  APCCommander  CarMoveToDirection
+aiSettings.addInterpreterEntry  APCCommander  CarMoveToObject
+aiSettings.addInterpreterEntry  APCCommander  Trigger
+aiSettings.addInterpreterEntry  APCCommander  TriggerContinously
+aiSettings.addInterpreterEntry  APCCommander  MouseTurretAimAt
+aiSettings.addInterpreterEntry  APCCommander  MouseTurretLookAt
+aiSettings.addInterpreterEntry  APCCommander  Sense
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTMergeSoldierInputs  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTRunOverObject  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTHonkHorn  Full
+aiSettings.activateDefaultInterpreter  APCCommander  BAPSTEvaluateCondition  Full
+
+
+
+rem *** APC AMPHIB Commander Behaviour setup ***
+
+aisettings.setVehicleMods  APCACommander  APCACommanderWeights
+aiSettings.setVehicleMaterialCost  APCACommander  Ground  1
+aiSettings.setVehicleMaterialCost  APCACommander  Road  1
+aiSettings.setVehicleMaterialCost  APCACommander  Shallows  1
+aiSettings.setVehicleMaterialCost  APCACommander  DeepWater  1
+
+aisettings.setVehicleMods  APCACommander  APCACommanderWeights
+aiSettings.setVehicleBehaviour  APCACommander  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  APCACommander  MoveTo  BBMoveTo  BBPGotoWaypoint2d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCACommander  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCACommander  Change  BBChange  BBPChange  3  UCUnion  ChangeInhibit
+aiSettings.setVehicleBehaviour  APCACommander  Fire  BBFireUnarmed  BBPFireDriveAttack  5  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCACommander  Special  BBRunOverSoldier  BBPRunOverSoldier  8  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCACommander  Special2  BBBridgeRepair  BBPBridgeRepair  7  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  APCACommander  Special3  BBDefuseMines  BBPDefuseMines  6  UCUnion  UnitWeights
+
+aiSettings.setVehicleDefaultBehaviour  APCACommander  MoveTo
+
+aiSettings.addInterpreterEntry  APCACommander  CarResetControls
+aiSettings.addInterpreterEntry  APCACommander  MoveToMedium  Medium
+aiSettings.addInterpreterEntry  APCACommander  MoveToObjectMedium  Medium
+aiSettings.addInterpreterEntry  APCACommander  InfoWrapper
+aiSettings.addInterpreterEntry  APCACommander  CarMoveTo
+aiSettings.addInterpreterEntry  APCACommander  CarMoveToDirection
+aiSettings.addInterpreterEntry  APCACommander  CarMoveToObject
+aiSettings.addInterpreterEntry  APCACommander  Trigger
+aiSettings.addInterpreterEntry  APCACommander  TriggerContinously
+aiSettings.addInterpreterEntry  APCACommander  MouseTurretAimAt
+aiSettings.addInterpreterEntry  APCACommander  MouseTurretLookAt
+aiSettings.addInterpreterEntry  APCACommander  Sense
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTMergeSoldierInputs  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTRunOverObject  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTHonkHorn  Full
+aiSettings.activateDefaultInterpreter  APCACommander  BAPSTEvaluateCondition  Full

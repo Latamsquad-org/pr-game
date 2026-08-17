@@ -1,0 +1,19 @@
+<map>
+	<name> Karbala </name>
+	<music> common/sound/menu/music/load/piratex_predator.ogg </music>
+	<modes>
+		<mode type="gpm_insurgency">
+			<maptype players="16" type="insurgency" locid="GAMEMODE_DESCRIPTION_insurgency"></maptype>
+			<maptype players="32" type="insurgency" locid="GAMEMODE_DESCRIPTION_insurgency"></maptype>
+			<maptype players="64" type="insurgency" locid="GAMEMODE_DESCRIPTION_insurgency"></maptype>
+			<maptype players="128" type="insurgency" locid="GAMEMODE_DESCRIPTION_insurgency"></maptype>
+		</mode>
+		<mode type="gpm_skirmish">
+			<maptype players="16" type="skirmish" locid="GAMEMODE_DESCRIPTION_skirmish"></maptype>
+		</mode>
+		<mode type="gpm_coop">
+			<maptype ai="1" players="32" type="coopalternative" locid="GAMEMODE_DESCRIPTION_coopalternative"></maptype>
+			<maptype ai="1" players="64" type="coopfullassets" locid="GAMEMODE_DESCRIPTION_coopfullassets"></maptype>
+		</mode>
+	</modes>
+</map>

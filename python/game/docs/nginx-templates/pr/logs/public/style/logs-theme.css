@@ -1,0 +1,420 @@
+/* PR Log Viewer - tema LATAM (mismo lenguaje visual que demos2d / tracker) */
+:root {
+  --logs-bg: #0a0e0b;
+  --logs-elevated: #121816;
+  --logs-row: #152019;
+  --logs-row-alt: #0f1612;
+  --logs-hover: #1e3224;
+  --logs-border: #2a332f;
+  --logs-text: #e8ece9;
+  --logs-muted: #9aa8a0;
+  --logs-accent: #6b8f3c;
+  --logs-accent-hover: #7fa648;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Scrollbar verde (Firefox + Chromium/Edge) */
+.logs-body,
+.logs-body * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--logs-accent) #152019;
+}
+
+.logs-body::-webkit-scrollbar,
+.logs-body *::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.logs-body::-webkit-scrollbar-track,
+.logs-body *::-webkit-scrollbar-track {
+  background: #152019;
+  border-radius: 8px;
+}
+
+.logs-body::-webkit-scrollbar-thumb,
+.logs-body *::-webkit-scrollbar-thumb {
+  background: var(--logs-accent);
+  border-radius: 8px;
+  border: 2px solid #152019;
+}
+
+.logs-body::-webkit-scrollbar-thumb:hover,
+.logs-body *::-webkit-scrollbar-thumb:hover {
+  background: var(--logs-accent-hover);
+}
+
+.logs-body::-webkit-scrollbar-corner,
+.logs-body *::-webkit-scrollbar-corner {
+  background: #152019;
+}
+
+body {
+  color: var(--logs-text) !important;
+  font-family: "Rajdhani", "Segoe UI", sans-serif !important;
+  font-weight: 500;
+  background-color: var(--logs-bg) !important;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -10%, rgba(55, 72, 40, 0.35), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 100% 100%, rgba(28, 36, 22, 0.55), transparent 50%),
+    radial-gradient(ellipse 70% 50% at 0% 80%, rgba(20, 28, 18, 0.5), transparent 45%),
+    repeating-linear-gradient(
+      125deg,
+      transparent 0,
+      transparent 11px,
+      rgba(0, 0, 0, 0.07) 11px,
+      rgba(0, 0, 0, 0.07) 12px
+    ),
+    repeating-linear-gradient(
+      35deg,
+      transparent 0,
+      transparent 17px,
+      rgba(107, 143, 60, 0.03) 17px,
+      rgba(107, 143, 60, 0.03) 18px
+    ),
+    linear-gradient(180deg, #0d120e 0%, #080b09 45%, #0a0f0c 100%) !important;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--logs-accent);
+}
+
+a:hover,
+a:focus {
+  color: var(--logs-accent-hover);
+}
+
+/* Escala logo como tracker/demos2d */
+.latam-site-header__inner {
+  min-height: 3.5rem;
+}
+
+.latam-site-brand__logo {
+  height: 1.8rem;
+  width: auto;
+}
+
+/* Pestañas Logs de admin / Logs de jugadores */
+.logs-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+  padding: 0.25rem;
+  border: 1px solid var(--logs-border);
+  border-radius: 6px;
+  background: var(--logs-elevated);
+}
+
+.logs-tabs__btn {
+  flex: 1 1 10rem;
+  margin: 0;
+  padding: 0.55rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--logs-muted);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.logs-tabs__btn:hover,
+.logs-tabs__btn:focus-visible {
+  color: var(--logs-text);
+  background: rgba(107, 143, 60, 0.12);
+  outline: none;
+}
+
+.logs-tabs__btn.is-active {
+  color: #fff;
+  background: rgba(107, 143, 60, 0.32);
+  border-color: var(--logs-accent);
+}
+
+.logs-page-title {
+  margin: 1rem auto 0;
+  max-width: 1140px;
+  padding: 0 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--logs-text);
+}
+
+.logs-page-title .logs-user {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--logs-muted);
+}
+
+.logs-page-title .logs-user a {
+  color: var(--logs-accent);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5.mb-3,
+label {
+  color: var(--logs-text);
+}
+
+.text-muted {
+  color: var(--logs-muted) !important;
+}
+
+/* Listas de servidores / comandos */
+.list-group-item {
+  background-color: var(--logs-row) !important;
+  border-color: var(--logs-border) !important;
+  color: var(--logs-text) !important;
+}
+
+.list-group-item:hover {
+  background-color: var(--logs-hover) !important;
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  background-color: rgba(107, 143, 60, 0.35) !important;
+  border-color: var(--logs-accent) !important;
+  color: #fff !important;
+  z-index: 1;
+}
+
+.list-group-item.bg-light,
+.bg-light {
+  background-color: rgba(107, 143, 60, 0.28) !important;
+  color: #fff !important;
+}
+
+.list-group-item label {
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn-link {
+  color: var(--logs-muted) !important;
+}
+
+.btn-link:hover {
+  color: var(--logs-accent-hover) !important;
+  text-decoration: none;
+}
+
+/* Botones */
+.btn-success,
+.btn-primary {
+  background-color: var(--logs-accent) !important;
+  border-color: var(--logs-accent) !important;
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--logs-accent-hover) !important;
+  border-color: var(--logs-accent-hover) !important;
+}
+
+.btn-success:disabled,
+.btn-primary:disabled {
+  opacity: 0.45;
+}
+
+/* Inputs */
+.form-control,
+.form-control-lg {
+  background-color: rgba(15, 22, 18, 0.9) !important;
+  border: 1px solid var(--logs-border) !important;
+  color: var(--logs-text) !important;
+}
+
+.form-control:focus {
+  background-color: rgba(15, 22, 18, 0.95) !important;
+  border-color: var(--logs-accent) !important;
+  color: var(--logs-text) !important;
+  box-shadow: 0 0 0 0.15rem rgba(107, 143, 60, 0.25) !important;
+}
+
+.form-control::placeholder {
+  color: var(--logs-muted) !important;
+  opacity: 0.85;
+}
+
+.input-group-btn .btn {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+/* Tablas */
+.table {
+  color: var(--logs-text) !important;
+  background-color: transparent;
+}
+
+.table thead th {
+  border-color: var(--logs-border) !important;
+  color: var(--logs-muted);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.table td,
+.table th {
+  border-color: var(--logs-border) !important;
+}
+
+.table-hover tbody tr:hover {
+  color: #fff !important;
+  background-color: var(--logs-hover) !important;
+}
+
+.table-sm {
+  font-size: 0.8rem;
+}
+
+/* Colores Bootstrap de comandos (legibles en oscuro) */
+.text-success {
+  color: #8fbf4a !important;
+}
+
+.text-danger {
+  color: #e07070 !important;
+}
+
+.text-warning {
+  color: #e0b050 !important;
+}
+
+.text-info {
+  color: #6eb0d0 !important;
+}
+
+.text-primary {
+  color: #7fa648 !important;
+}
+
+/* Modal */
+.modal-content {
+  background-color: var(--logs-elevated) !important;
+  border: 1px solid var(--logs-border) !important;
+  color: var(--logs-text);
+}
+
+.modal-header {
+  border-bottom-color: var(--logs-border) !important;
+}
+
+.modal-header .close {
+  color: var(--logs-text);
+  text-shadow: none;
+  opacity: 0.75;
+}
+
+.modal-header .close:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.modal-title {
+  color: var(--logs-text);
+}
+
+.modal-backdrop.show {
+  opacity: 0.75;
+}
+
+/* Alertas login */
+.alert-danger {
+  background-color: rgba(160, 40, 40, 0.35) !important;
+  border-color: #a04040 !important;
+  color: #f0c0c0 !important;
+}
+
+/* Bloques legacy */
+.well,
+.well-sm,
+.shadow-sm {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.logs-footer {
+  opacity: 0.55;
+  padding: 2rem 1rem 2.5rem;
+  text-align: center;
+}
+
+/* Login centrado */
+.logs-login-wrap {
+  max-width: 420px;
+  margin: 12vh auto 3rem;
+  padding: 0 1rem;
+}
+
+.logs-login-wrap h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+}
+
+/* Area scroll de comandos */
+.tab-block > div[style*="overflow"] {
+  border: 1px solid var(--logs-border);
+  background: rgba(10, 14, 11, 0.5);
+}
+
+/* Spinner de carga (Mostrar log / Buscar) - verde grande */
+.logs-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.logs-spinner {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 7px solid rgba(107, 143, 60, 0.25);
+  border-top-color: var(--logs-accent);
+  border-right-color: var(--logs-accent-hover);
+  animation: logs-spin 0.75s linear infinite;
+  box-shadow: 0 0 18px rgba(107, 143, 60, 0.35);
+}
+
+.logs-loading-text {
+  color: var(--logs-accent);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.logs-paging-bar {
+  gap: 0.75rem;
+}
+
+.logs-paging-bar .btn {
+  white-space: nowrap;
+}

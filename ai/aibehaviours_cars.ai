@@ -1,0 +1,225 @@
+
+rem *** Construct Car weights ***
+aiSettings.createBehaviourModifiers  CarWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct Bombcar weights ***
+aiSettings.createBehaviourModifiers  BombcarWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+rem *** Construct ArmedCar weights ***
+aiSettings.createBehaviourModifiers  ArmedCarWeights
+aiSettings.setBehaviourModifier  Avoid  9.0
+aiSettings.setBehaviourModifier  MoveTo  2.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  2.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  8.0
+aiSettings.setBehaviourModifier  Special  7.0
+aiSettings.setBehaviourModifier  Revive  6.0
+aiSettings.setBehaviourModifier  c4  5.0
+aiSettings.setBehaviourModifier  Special2  4.0
+aiSettings.setBehaviourModifier  Special3  3.0
+aiSettings.setBehaviourModifier  Random  1.5
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+
+
+rem *** Car Behaviour setup ***
+
+aiSettings.setVehicleMaterialCost  Car  Ground  1
+aiSettings.setVehicleMaterialCost  Car  Road  0.5
+aiSettings.setVehicleMaterialCost  Car  Shallows  1.8
+aiSettings.setVehicleMaterialCost  Car  DeepWater  -1
+
+aisettings.setVehicleMods  Car  CarWeights
+aiSettings.setVehicleBehaviour  Car  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  Car  MoveTo  BBMoveTo  BBPGotoWaypoint2d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Car  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Car  Change  BBChange  BBPChange  3  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Car  Fire  BBFireUnarmed  BBPFireDriveAttack  5  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Car  Special  BBRunOverSoldier  BBPRunOverSoldier  8  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Car  Special2  BBBridgeRepair  BBPBridgeRepair  7  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Car  Special3  BBDefuseMines  BBPDefuseMines  6  UCUnion  UnitWeights
+  
+aiSettings.setVehicleDefaultBehaviour  Car  MoveTo
+
+aiSettings.addInterpreterEntry  Car  CarResetControls
+aiSettings.addInterpreterEntry  Car  MoveToMedium  Medium
+aiSettings.addInterpreterEntry  Car  MoveToObjectMedium  Medium
+aiSettings.addInterpreterEntry  Car  InfoWrapper
+aiSettings.addInterpreterEntry  Car  CarMoveTo
+aiSettings.addInterpreterEntry  Car  CarMoveToDirection
+aiSettings.addInterpreterEntry  Car  CarMoveToObject
+aiSettings.addInterpreterEntry  Car  Trigger
+aiSettings.addInterpreterEntry  Car  TriggerContinously
+aiSettings.addInterpreterEntry  Car  MouseTurretAimAt
+aiSettings.addInterpreterEntry  Car  MouseTurretLookAt
+aiSettings.addInterpreterEntry  Car  Sense
+aiSettings.activateDefaultInterpreter  Car  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTMergeSoldierInputs  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTLookAtWrapper  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTRunOverObject  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTHonkHorn  Full
+aiSettings.activateDefaultInterpreter  Car  BAPSTEvaluateCondition  Full
+
+
+
+rem *** Bombcar Behaviour setup ***
+
+aisettings.setVehicleMods  Bombcar  BombcarWeights
+aiSettings.setVehicleMaterialCost  Bombcar  Ground  1
+aiSettings.setVehicleMaterialCost  Bombcar  Road  0.5
+aiSettings.setVehicleMaterialCost  Bombcar  Shallows  1.8
+aiSettings.setVehicleMaterialCost  Bombcar  DeepWater  -1
+
+aiSettings.setVehicleBehaviour  Bombcar  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  Bombcar  MoveTo  BBMoveTo  BBPGotoWaypoint2d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Bombcar  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Bombcar  Fire  BBFireInfantery  BBPFireInfantery  5  UCFire  UnitWeights
+aiSettings.setVehicleBehaviour  Bombcar  Special2  BBBridgeRepair  BBPBridgeRepair  7  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Bombcar  Special3  BBDefuseMines  BBPDefuseMines  6  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Bombcar  Change  BBChange  BBPChange  3  UCUnion  ChangeInhibit
+
+aiSettings.setVehicleDefaultBehaviour  Bombcar  MoveTo
+
+aiSettings.addInterpreterEntry  Bombcar  MoveToMedium  Medium
+aiSettings.addInterpreterEntry  Bombcar  MoveToObjectMedium  Medium
+aiSettings.addInterpreterEntry  Bombcar  InfoWrapper
+aiSettings.addInterpreterEntry  Bombcar  CarMoveTo
+aiSettings.addInterpreterEntry  Bombcar  CarMoveToDirection
+aiSettings.addInterpreterEntry  Bombcar  CarMoveToObject
+aiSettings.addInterpreterEntry  Bombcar  Trigger
+aiSettings.addInterpreterEntry  Bombcar  TriggerContinously
+aiSettings.addInterpreterEntry  Bombcar  MouseTurretAimAt
+aiSettings.addInterpreterEntry  Bombcar  MouseTurretLookAt
+aiSettings.addInterpreterEntry  Bombcar  CarResetControls
+aiSettings.addInterpreterEntry  Bombcar  Sense
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTOverrideSensingAgent  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTMergeSoldierInputs  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTLookAtWrapper  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  Bombcar  BAPSTEvaluateCondition  Full
+aiSettings.addSensingAgentPattern  Bombcar  Turret
+
+
+
+rem *** Armed Car Behaviour setup ***
+
+aisettings.setVehicleMods  ArmedCar  ArmedCarWeights
+aiSettings.setVehicleMaterialCost  ArmedCar  Ground  1
+aiSettings.setVehicleMaterialCost  ArmedCar  Road  1
+aiSettings.setVehicleMaterialCost  ArmedCar  Shallows  1
+aiSettings.setVehicleMaterialCost  ArmedCar  DeepWater  2
+
+aiSettings.setVehicleBehaviour  ArmedCar  Avoid  BBAvoid  BBPAvoidCollision2d  9  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  ArmedCar  MoveTo  BBMoveTo  BBPGotoWaypoint2d  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  ArmedCar  Idle  BBIdle  BBPIdle2d  0.001  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  ArmedCar  Change  BBChange  BBPChange  3  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  ArmedCar  Fire  BBFireInfantery  BBPFireInfantery  5  UCFire  UnitWeights
+aiSettings.setVehicleBehaviour  ArmedCar  Special2  BBBridgeRepair  BBPBridgeRepair  7  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  ArmedCar  Special3  BBDefuseMines  BBPDefuseMines  6  UCUnion  UnitWeights
+
+aiSettings.setVehicleDefaultBehaviour  ArmedCar  MoveTo
+
+aiSettings.addInterpreterEntry  ArmedCar  CarResetControls
+aiSettings.addInterpreterEntry  ArmedCar  MoveToMedium  Medium
+aiSettings.addInterpreterEntry  ArmedCar  MoveToObjectMedium  Medium
+aiSettings.addInterpreterEntry  ArmedCar  InfoWrapper
+aiSettings.addInterpreterEntry  ArmedCar  CarMoveTo
+aiSettings.addInterpreterEntry  ArmedCar  CarMoveToDirection
+aiSettings.addInterpreterEntry  ArmedCar  CarMoveToObject
+aiSettings.addInterpreterEntry  ArmedCar  Trigger
+aiSettings.addInterpreterEntry  ArmedCar  TriggerContinously
+aiSettings.addInterpreterEntry  ArmedCar  MouseTurretAimAt
+aiSettings.addInterpreterEntry  ArmedCar  MouseTurretLookAt
+aiSettings.addInterpreterEntry  ArmedCar  Sense
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTOverrideSensingAgent  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTMergeSoldierInputs  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTLookAtWrapper  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  ArmedCar  BAPSTEvaluateCondition  Full
+aiSettings.addSensingAgentPattern  ArmedCar  Turret

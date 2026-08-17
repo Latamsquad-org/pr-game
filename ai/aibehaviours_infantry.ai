@@ -1,0 +1,105 @@
+
+rem *** Construct Infantery Weights ***
+aiSettings.createBehaviourModifiers  InfanteryWeights
+aiSettings.setBehaviourModifier  Avoid  10.0
+aiSettings.setBehaviourModifier  MoveTo  5.0
+aiSettings.setBehaviourModifier  Idle  0.001
+aiSettings.setBehaviourModifier  Fire  9.5
+aiSettings.setBehaviourModifier  Special  7.5
+aiSettings.setBehaviourModifier  TakeCover  0.5
+aiSettings.setBehaviourModifier  Change  9.0
+aiSettings.setBehaviourModifier  Revive  8.0
+aiSettings.setBehaviourModifier  c4  8.5
+aiSettings.setBehaviourModifier  Special2  7.0
+aiSettings.setBehaviourModifier  Special3  6.5
+aiSettings.setBehaviourModifier  Random  2.0
+aiSettings.setBehaviourModifier  Triggerable  1.0
+
+
+
+rem *** Infantery Behaviour setup ***
+
+aisettings.setVehicleMods  Infantery  InfanteryWeights
+aiSettings.setVehicleMaterialCost  Infantery  Ground  1
+aiSettings.setVehicleMaterialCost  Infantery  Road  1
+aiSettings.setVehicleMaterialCost  Infantery  Shallows  1.1
+aiSettings.setVehicleMaterialCost  Infantery  DeepWater  6
+
+aiSettings.setVehicleBehaviour  Infantery  Avoid  BBAvoid  BBPAvoidCollisionInfantery  13  UCUnion  AvoidInhibit
+aiSettings.setVehicleBehaviour  Infantery  MoveTo  BBMoveTo  BBPGotoWaypointInfantery  5  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Infantery  Idle  BBIdle  BBPIdleInfantery  1  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Infantery  Fire  BBFireInfantery  BBPFireInfantery  12  UCFire  UnitWeights
+aiSettings.setVehicleBehaviour  Infantery  Special  BBMedicAssist  BBPMedicAssist  9  UCMedicAssistLinear  UnitWeights
+aiSettings.setVehicleBehaviour  Infantery  Special2  BBBridgeRepair  BBPBridgeRepair  8  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Infantery  c4  BBC4  BBPC4  11  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Infantery  Special3  BBDefuseMines  BBPDefuseMines  7  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Infantery  Change  BBChange  BBPChange  6  UCUnion  ChangeInhibit
+aiSettings.setVehicleBehaviour  Infantery  Revive  BBRevive  BBPRevive  10  UCReviveLinear  UnitWeights
+aiSettings.setVehicleBehaviour  Infantery  Random  BBRandom  BBPRandom  4  UCUnion  UnitWeights
+aiSettings.setVehicleBehaviour  Infantery  Triggerable  BBTriggerable  BBPTriggerable  3  UCUnion  UnitWeights
+
+aiSettings.setVehicleDefaultBehaviour  Infantery  MoveTo
+
+aiSettings.addInterpreterEntry  Infantery  MoveToMediumSoldier  Medium
+aiSettings.addInterpreterEntry  Infantery  MoveToObjectMediumSoldier  Medium
+aiSettings.addInterpreterEntry  Infantery  InfoWrapper
+aiSettings.addInterpreterEntry  Infantery  InfanteryMoveTo
+aiSettings.addInterpreterEntry  Infantery  InfanteryMoveToDirection
+aiSettings.addInterpreterEntry  Infantery  InfanteryMoveToObject
+aiSettings.addInterpreterEntry  Infantery  Trigger
+aiSettings.addInterpreterEntry  Infantery  TriggerContinously
+aiSettings.addInterpreterEntry  Infantery  MouseTurretAimAt
+aiSettings.addInterpreterEntry  Infantery  InfanteryResetControls
+aiSettings.addInterpreterEntry  Infantery  MouseTurretLookAt
+aiSettings.addInterpreterEntry  Infantery  Sense
+aiSettings.addInterpreterEntry  Infantery  SoldierPose
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTOverrideSensingAgent  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTPlaceC4  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTIf  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTPlanEnd  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTWait  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTWeaponWrapper  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTFinishedWrapper  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTAimingWrapper  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTUpdateVehicle  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTChangeWeapon  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTICTurnLock  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTICChangeVehicle  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTEvaluate  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTNotifyBot  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTIdle  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTSetSensingAgentFocus  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTMergeSoldierInputs  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTLookAtWrapper  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTForgetTarget  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTEvaluateCondition  Full
+aiSettings.activateDefaultInterpreter  Infantery  BAPSTRevive  Full
+aiSettings.addSensingAgentPattern  Infantery  Soldier
+
+
+
+rem *** ManDown Behaviour setup ***
+
+aisettings.setVehicleMods  ManDown  UnitWeights
+aiSettings.setVehicleBehaviour  ManDown  Idle  BBIdle  BBPIdle2d  2  UCUnion  UnitWeights
+
+aiSettings.setVehicleDefaultBehaviour  ManDown  Idle
+
+aiSettings.addInterpreterEntry  ManDown  Trigger
+aiSettings.addInterpreterEntry  ManDown  InfanteryResetControls
+aiSettings.activateDefaultInterpreter  ManDown  BAPSTWhile  Full
+aiSettings.activateDefaultInterpreter  ManDown  BAPSTParallel  Full
+aiSettings.activateDefaultInterpreter  ManDown  BAPSTSerial  Full
+aiSettings.activateDefaultInterpreter  ManDown  BAPSTSendRadioMessage  Full
+aiSettings.activateDefaultInterpreter  ManDown  BAPSTDebug  Full
+aiSettings.activateDefaultInterpreter  ManDown  BAPSTInfoWrapper  Full
+aiSettings.activateDefaultInterpreter  ManDown  BAPSTUseFlareOnMissileLock  Full
+aiSettings.activateDefaultInterpreter  ManDown  BAPSTSoldierPose  Full
+aiSettings.activateDefaultInterpreter  ManDown  BAPSTEvaluateCondition  Full
+aiSettings.addSensingAgentPattern  ManDown  Null

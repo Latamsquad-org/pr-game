@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Reality · LATAMSQUAD Stats</title>
+    <meta name="description" content="Estadísticas de Project Reality LATAMSQUAD: jugadores, kills, sync y tops del servidor. Ranking, rangos, clanes y tesoros.">
+    <meta name="theme-color" content="#ff8000">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css?v=20260725toolbar">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <div class="site-header__left">
+                <a class="site-brand" href="/" aria-label="LATAMSTATS — Elegir juego">
+                    <img
+                        class="site-brand__logo"
+                        src="/assets/img/latamstats-logo.png?v=1"
+                        alt="LATAMSTATS"
+                        width="610"
+                        height="91"
+                    >
+                </a>
+                <nav class="site-nav site-nav--primary" aria-label="Principal">
+                    <a class="site-nav__link" href="/">Juegos</a>
+                                        <a class="site-nav__link is-active" href="/pr?s=1">Inicio</a>
+                    <a class="site-nav__link" href="/ranking?s=1">Ranking</a>
+                    <a class="site-nav__link" href="/rangos?s=1">Rangos</a>
+                    <a class="site-nav__link" href="/clans?s=1">Clanes</a>
+                                    </nav>
+            </div>
+
+            <nav class="site-nav site-nav--meta" aria-label="Cuenta y enlaces">
+                <a class="site-nav__link site-nav__link--external site-nav__link--latamsquad" href="https://latamsquad.org" target="_blank" rel="noopener noreferrer"><span class="site-nav__latamsquad-latam">LATAM</span><span class="site-nav__latamsquad-squad">SQUAD</span></a>
+                <a class="site-nav__link site-nav__link--external site-nav__link--latamtorneos" href="https://latamtorneos.org" target="_blank" rel="noopener noreferrer"><span class="site-nav__latamtorneos-latam">LATAM</span><span class="site-nav__latamtorneos-torneos">TORNEOS</span></a>
+                <a class="site-nav__link site-nav__link--external site-nav__link--discord" href="https://discord.gg/latamsquad" target="_blank" rel="noopener noreferrer">Discord</a>
+                                <a class="site-nav__link" href="/auth/discord.php">Entrar</a>
+                            </nav>
+        </div>
+    </header>
+
+    <section class="hero" aria-label="Marca LATAMSQUAD">
+        <div class="hero__inner">
+            <img
+                class="hero__logo"
+                src="/assets/img/latamsquad-logo.png"
+                alt="LATAMSQUAD"
+                width="280"
+                height="280"
+            >
+            <h1 class="hero__brand"><span class="sr-only">LATAMSQUAD</span></h1>
+            <p class="hero__subtitle">Project Reality Stats</p>
+        </div>
+    </section>
+
+    <main class="site-main">
+                <div class="content-toolbar">
+                        <h2 class="content-toolbar__title">Project Reality - estadisticas LATAMSQUAD</h2>
+                                    <nav class="server-tabs" aria-label="Servidor" data-current-server="1"><a class="server-tabs__link is-active" href="/pr?s=1" data-server="1" aria-current="page">Servidor 1</a><a class="server-tabs__link" href="/pr?s=2" data-server="2">Servidor 2</a><a class="server-tabs__link" href="/pr?s=3" data-server="3">Servidor 3</a><a class="server-tabs__link" href="/pr?s=4" data-server="4">Servidor 4</a></nav>                    </div>
+                    <section class="seo-intro" aria-label="Project Reality - estadisticas LATAMSQUAD">
+                        <p class="seo-intro__text">
+                Resumen del servidor elegido: totales de jugadores, score, kills y última sincronización,
+                más el top player y el top clan. Desde aquí podés ir al ranking completo, a los rangos
+                militares o a la lista de clanes.
+            </p>
+        </section>
+        <section class="metrics" aria-label="Resumen del servidor">
+            <article class="metric">
+                <p class="metric__label">Jugadores totales</p>
+                <p class="metric__value">1.908</p>
+            </article>
+            <article class="metric">
+                <p class="metric__label">Puntos totales</p>
+                <p class="metric__value">2.209.061</p>
+            </article>
+            <article class="metric">
+                <p class="metric__label">Kills totales</p>
+                <p class="metric__value">40.256</p>
+            </article>
+            <article class="metric">
+                <p class="metric__label">Muertes totales</p>
+                <p class="metric__value">43.187</p>
+            </article>
+            <article class="metric">
+                <p class="metric__label">Última sync</p>
+                <p class="metric__value metric__value--sync">
+                    <span>26/07/2026 04:12</span>
+                                            <img class="metric__flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNCI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE0IiBmaWxsPSIjMDA5YjNhIi8+PHBvbHlnb24gcG9pbnRzPSIxMCwxIDE5LDcgMTAsMTMgMSw3IiBmaWxsPSIjZmVkZjAwIi8+PGNpcmNsZSBjeD0iMTAiIGN5PSI3IiByPSIzLjUiIGZpbGw9IiMwMDI3NzYiLz48cGF0aCBkPSJNNi4yIDcuMSBRMTAgOS40IDEzLjggNy4xIFExMCA2LjcgNi4yIDcuMSIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==" alt="Brasil" title="Brasil" width="30" height="21" loading="lazy">                                    </p>
+            </article>
+        </section>
+
+        <section class="top-highlights" aria-label="Top player y top clan">
+            <article class="top-card top-card--player">
+                                                        <div class="top-card__body">
+                        <p class="top-card__eyebrow">Top Player</p>
+                        <h2 class="top-card__title">
+                                                        <span class="top-card__title-clan"><a class="clan-link" href="/clans?s=1#clan-0-o">(0.o)</a></span>
+                                                                                    <a href="/player?id=95a301ed1e14469aa2183ffcda366403&amp;s=1">ricardoklement</a>
+                                                    </h2>
+                        <p class="top-card__meta">
+                            XP 218.467                            · Score 36.413                            · K/D 3,97                        </p>
+                        <p class="top-card__stats">
+                            735 kills
+                            · 185 deaths
+                            · 80 rounds
+                        </p>
+                    </div>
+                                        <a
+                        class="top-card__rank-showcase top-card__rank-link"
+                        href="/rangos?s=1#rango-soldado"
+                        aria-label="Rango Soldado"
+                    >
+                        <img class="top-card__rank-icon rank-icon--soldado" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXNvbGRhZG8iIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXNvbGRhZG8iIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXNvbGRhZG8pIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cG9seWdvbiBwb2ludHM9IjE0LDQ0IDMyLDI0IDUwLDQ0IDQ0LDQ0IDMyLDMyIDIwLDQ0IiBmaWxsPSJ1cmwoI3JhbmstdGhyZWFkLXNvbGRhZG8pIi8+IDwvZz48L3N2Zz4=" alt="Soldado" width="96" height="96" loading="lazy">                        <p class="top-card__rank-name">Soldado</p>
+                    </a>
+                            </article>
+
+            <article class="top-card top-card--clan">
+                                                        <div class="top-card__body">
+                        <p class="top-card__eyebrow">Top Clan</p>
+                        <h2 class="top-card__title">
+                                                        <a href="/clans?s=1#clan-kkck">[KKCK]</a>
+                                                    </h2>
+                        <p class="top-card__meta">
+                            XP 762.627                            · Score 183.475                            · K/D 1,55                        </p>
+                        <p class="top-card__stats">
+                            36 jugadores                            · 3.208 kills
+                            · 2.071 deaths
+                        </p>
+                    </div>
+                    <div class="top-card__clan-showcase" aria-label="Logo [KKCK]">
+                        <img class="top-card__clan-logo" src="/assets/img/clans/kkck.webp?v=1784474912" alt="Logo [KKCK]" width="176" height="176" loading="lazy">                    </div>
+                            </article>
+        </section>
+
+        <div class="stats-table-wrap">
+            <table class="stats-table stats-table--top10">
+                <caption>Top 10 por XP</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Clan</th>
+                        <th scope="col">Jugador</th>
+                        <th scope="col">Rango</th>
+                                                                        <th
+                            scope="col"
+                            class="num"
+                            aria-sort="descending"
+                        >
+                            <a href="/ranking?sort=xp&amp;dir=desc&amp;s=1">
+                                XP ↓                            </a>
+                        </th>
+                                                <th
+                            scope="col"
+                            class="num"
+                            aria-sort="none"
+                        >
+                            <a href="/ranking?sort=score&amp;dir=desc&amp;s=1">
+                                Score                            </a>
+                        </th>
+                                                <th
+                            scope="col"
+                            class="num"
+                            aria-sort="none"
+                        >
+                            <a href="/ranking?sort=kills&amp;dir=desc&amp;s=1">
+                                Kills                            </a>
+                        </th>
+                                                <th
+                            scope="col"
+                            class="num"
+                            aria-sort="none"
+                        >
+                            <a href="/ranking?sort=deaths&amp;dir=desc&amp;s=1">
+                                Deaths                            </a>
+                        </th>
+                                                <th
+                            scope="col"
+                            class="num"
+                            aria-sort="none"
+                        >
+                            <a href="/ranking?sort=rounds&amp;dir=desc&amp;s=1">
+                                Rounds                            </a>
+                        </th>
+                                                <th
+                            scope="col"
+                            class="num"
+                            aria-sort="none"
+                        >
+                            <a href="/ranking?sort=kd&amp;dir=desc&amp;s=1">
+                                K/D                            </a>
+                        </th>
+                                                <th
+                            scope="col"
+                            class="num"
+                            aria-sort="none"
+                        >
+                            <a href="/ranking?sort=treasures&amp;dir=desc&amp;s=1">
+                                T                            </a>
+                        </th>
+                                            </tr>
+                </thead>
+                <tbody>
+                                                                                <tr>
+                        <td class="num ranking-pos ranking-pos--1">1</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-0-o">(0.o)</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=95a301ed1e14469aa2183ffcda366403&amp;s=1">ricardoklement</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--soldado rank-badge--link" href="/rangos?s=1#rango-soldado" title="Soldado"><img class="rank-badge__icon rank-icon--soldado" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXNvbGRhZG8iIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXNvbGRhZG8iIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXNvbGRhZG8pIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cG9seWdvbiBwb2ludHM9IjE0LDQ0IDMyLDI0IDUwLDQ0IDQ0LDQ0IDMyLDMyIDIwLDQ0IiBmaWxsPSJ1cmwoI3JhbmstdGhyZWFkLXNvbGRhZG8pIi8+IDwvZz48L3N2Zz4=" alt="Soldado" width="20" height="20" loading="lazy"><span class="rank-badge__name">Soldado</span></a></td>
+                        <td class="num">218.467</td>
+                        <td class="num">36.413</td>
+                        <td class="num">735</td>
+                        <td class="num">185</td>
+                        <td class="num">80</td>
+                        <td class="num">3,97</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                            <tr>
+                        <td class="num ranking-pos ranking-pos--2">2</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-0-o">(0.o)</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=8615cd5df1e8412e8227480b74aee6be&amp;s=1">aestethicSupreme</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--soldado rank-badge--link" href="/rangos?s=1#rango-soldado" title="Soldado"><img class="rank-badge__icon rank-icon--soldado" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXNvbGRhZG8iIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXNvbGRhZG8iIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXNvbGRhZG8pIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cG9seWdvbiBwb2ludHM9IjE0LDQ0IDMyLDI0IDUwLDQ0IDQ0LDQ0IDMyLDMyIDIwLDQ0IiBmaWxsPSJ1cmwoI3JhbmstdGhyZWFkLXNvbGRhZG8pIi8+IDwvZz48L3N2Zz4=" alt="Soldado" width="20" height="20" loading="lazy"><span class="rank-badge__name">Soldado</span></a></td>
+                        <td class="num">188.104</td>
+                        <td class="num">26.612</td>
+                        <td class="num">757</td>
+                        <td class="num">141</td>
+                        <td class="num">59</td>
+                        <td class="num">5,37</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                            <tr>
+                        <td class="num ranking-pos ranking-pos--3">3</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-fi">[FI]</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=6e707951874e4f3ba8fe3a398ff580c4&amp;s=1">MathySJ_ArG</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--soldado rank-badge--link" href="/rangos?s=1#rango-soldado" title="Soldado"><img class="rank-badge__icon rank-icon--soldado" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXNvbGRhZG8iIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXNvbGRhZG8iIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXNvbGRhZG8pIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cG9seWdvbiBwb2ludHM9IjE0LDQ0IDMyLDI0IDUwLDQ0IDQ0LDQ0IDMyLDMyIDIwLDQ0IiBmaWxsPSJ1cmwoI3JhbmstdGhyZWFkLXNvbGRhZG8pIi8+IDwvZz48L3N2Zz4=" alt="Soldado" width="20" height="20" loading="lazy"><span class="rank-badge__name">Soldado</span></a></td>
+                        <td class="num">164.603</td>
+                        <td class="num">25.384</td>
+                        <td class="num">599</td>
+                        <td class="num">130</td>
+                        <td class="num">53</td>
+                        <td class="num">4,61</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                            <tr>
+                        <td class="num ranking-pos ranking-pos--4">4</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-1ibbp">1IBBP=</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=92759074dd0e477dac128255b83759b5&amp;s=1">France$z.exe</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--soldado rank-badge--link" href="/rangos?s=1#rango-soldado" title="Soldado"><img class="rank-badge__icon rank-icon--soldado" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXNvbGRhZG8iIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXNvbGRhZG8iIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXNvbGRhZG8pIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cG9seWdvbiBwb2ludHM9IjE0LDQ0IDMyLDI0IDUwLDQ0IDQ0LDQ0IDMyLDMyIDIwLDQ0IiBmaWxsPSJ1cmwoI3JhbmstdGhyZWFkLXNvbGRhZG8pIi8+IDwvZz48L3N2Zz4=" alt="Soldado" width="20" height="20" loading="lazy"><span class="rank-badge__name">Soldado</span></a></td>
+                        <td class="num">120.839</td>
+                        <td class="num">18.115</td>
+                        <td class="num">700</td>
+                        <td class="num">145</td>
+                        <td class="num">61</td>
+                        <td class="num">4,83</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                            <tr>
+                        <td class="num ranking-pos ranking-pos--5">5</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-fi">[FI]</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=bf62777a89d6499ea0badf2284839cc6&amp;s=1">Ricardomr27</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--soldado rank-badge--link" href="/rangos?s=1#rango-soldado" title="Soldado"><img class="rank-badge__icon rank-icon--soldado" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXNvbGRhZG8iIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXNvbGRhZG8iIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXNvbGRhZG8pIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cG9seWdvbiBwb2ludHM9IjE0LDQ0IDMyLDI0IDUwLDQ0IDQ0LDQ0IDMyLDMyIDIwLDQ0IiBmaWxsPSJ1cmwoI3JhbmstdGhyZWFkLXNvbGRhZG8pIi8+IDwvZz48L3N2Zz4=" alt="Soldado" width="20" height="20" loading="lazy"><span class="rank-badge__name">Soldado</span></a></td>
+                        <td class="num">111.418</td>
+                        <td class="num">20.338</td>
+                        <td class="num">684</td>
+                        <td class="num">209</td>
+                        <td class="num">81</td>
+                        <td class="num">3,27</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                            <tr>
+                        <td class="num ranking-pos ranking-pos--6">6</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-prwars">prWARs</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=dfbd47c303b64836829933b332b6329d&amp;s=1">DURAND</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--recluta rank-badge--link" href="/rangos?s=1#rango-recluta" title="Recluta"><img class="rank-badge__icon rank-icon--recluta" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXJlY2x1dGEiIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXJlY2x1dGEiIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXJlY2x1dGEpIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cGF0aCBkPSJNMTQgNDIgTDMyIDIyIEw1MCA0MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3JhbmstdGhyZWFkLXJlY2x1dGEpIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+IDwvZz48L3N2Zz4=" alt="Recluta" width="20" height="20" loading="lazy"><span class="rank-badge__name">Recluta</span></a></td>
+                        <td class="num">88.985</td>
+                        <td class="num">15.147</td>
+                        <td class="num">448</td>
+                        <td class="num">118</td>
+                        <td class="num">40</td>
+                        <td class="num">3,80</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                            <tr>
+                        <td class="num ranking-pos ranking-pos--7">7</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-noob">[NOOB]</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=726acc33430e4d499b9074b8af7b5360&amp;s=1">JonNZziN</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--recluta rank-badge--link" href="/rangos?s=1#rango-recluta" title="Recluta"><img class="rank-badge__icon rank-icon--recluta" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXJlY2x1dGEiIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXJlY2x1dGEiIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXJlY2x1dGEpIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cGF0aCBkPSJNMTQgNDIgTDMyIDIyIEw1MCA0MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3JhbmstdGhyZWFkLXJlY2x1dGEpIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+IDwvZz48L3N2Zz4=" alt="Recluta" width="20" height="20" loading="lazy"><span class="rank-badge__name">Recluta</span></a></td>
+                        <td class="num">87.046</td>
+                        <td class="num">17.434</td>
+                        <td class="num">654</td>
+                        <td class="num">248</td>
+                        <td class="num">64</td>
+                        <td class="num">2,64</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                            <tr>
+                        <td class="num ranking-pos ranking-pos--8">8</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-1ibbp">1IBBP=</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=2c432d1583d649c3895aa00e6b8ab0e7&amp;s=1">sTOck_01!</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--recluta rank-badge--link" href="/rangos?s=1#rango-recluta" title="Recluta"><img class="rank-badge__icon rank-icon--recluta" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXJlY2x1dGEiIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXJlY2x1dGEiIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXJlY2x1dGEpIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cGF0aCBkPSJNMTQgNDIgTDMyIDIyIEw1MCA0MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3JhbmstdGhyZWFkLXJlY2x1dGEpIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+IDwvZz48L3N2Zz4=" alt="Recluta" width="20" height="20" loading="lazy"><span class="rank-badge__name">Recluta</span></a></td>
+                        <td class="num">83.991</td>
+                        <td class="num">17.862</td>
+                        <td class="num">290</td>
+                        <td class="num">128</td>
+                        <td class="num">63</td>
+                        <td class="num">2,27</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                            <tr>
+                        <td class="num ranking-pos ranking-pos--9">9</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-0-o">(0.o)</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=f44bbb32523a46a5a80d878fc6e93a79&amp;s=1">privitogg</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--recluta rank-badge--link" href="/rangos?s=1#rango-recluta" title="Recluta"><img class="rank-badge__icon rank-icon--recluta" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXJlY2x1dGEiIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXJlY2x1dGEiIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXJlY2x1dGEpIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cGF0aCBkPSJNMTQgNDIgTDMyIDIyIEw1MCA0MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3JhbmstdGhyZWFkLXJlY2x1dGEpIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+IDwvZz48L3N2Zz4=" alt="Recluta" width="20" height="20" loading="lazy"><span class="rank-badge__name">Recluta</span></a></td>
+                        <td class="num">80.198</td>
+                        <td class="num">14.244</td>
+                        <td class="num">393</td>
+                        <td class="num">113</td>
+                        <td class="num">53</td>
+                        <td class="num">3,48</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                            <tr>
+                        <td class="num ranking-pos ranking-pos--10">10</td>
+                        <td><a class="clan-link" href="/clans?s=1#clan-kkck">[KKCK]</a></td>
+                        <td>
+                                                        <a class="player-name" href="/player?id=d8b7f8db31d648b6b35a3eff88f48ce9&amp;s=1">kalyxto.ARG</a>
+                                                    </td>
+                        <td><a class="rank-badge rank-badge--recluta rank-badge--link" href="/rangos?s=1#rango-recluta" title="Recluta"><img class="rank-badge__icon rank-icon--recluta" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PHBhdHRlcm4gaWQ9InJhbmstZmFicmljLXJlY2x1dGEiIHdpZHRoPSIzIiBoZWlnaHQ9IjMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiMxNzFjMjIiLz48bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMyIgc3Ryb2tlPSIjMjAyNjJlIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9InJhbmstdGhyZWFkLXJlY2x1dGEiIHdpZHRoPSIyLjQiIGhlaWdodD0iMi40IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNjApIj48cmVjdCB3aWR0aD0iMi40IiBoZWlnaHQ9IjIuNCIgZmlsbD0iI2ZmODAwMCIvPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIyLjQiIHN0cm9rZT0iI2M5NjQwMCIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGNsYXNzPSJyYW5rLXBhdGNoLWJhc2UiIHg9IjMiIHk9IjMiIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgcng9IjEyIiBmaWxsPSJ1cmwoI3JhbmstZmFicmljLXJlY2x1dGEpIi8+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiByeD0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmODAwMCIgc3Ryb2tlLXdpZHRoPSIyLjgiIHN0cm9rZS1kYXNoYXJyYXk9IjIuNiAxLjciLz48cmVjdCB4PSI3LjUiIHk9IjcuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE0YTAwIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWRhc2hhcnJheT0iMS44IDEuOCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUgNSkgc2NhbGUoMC44NDM3NSkiPiA8cGF0aCBkPSJNMTQgNDIgTDMyIDIyIEw1MCA0MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3JhbmstdGhyZWFkLXJlY2x1dGEpIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+IDwvZz48L3N2Zz4=" alt="Recluta" width="20" height="20" loading="lazy"><span class="rank-badge__name">Recluta</span></a></td>
+                        <td class="num">78.308</td>
+                        <td class="num">17.460</td>
+                        <td class="num">616</td>
+                        <td class="num">311</td>
+                        <td class="num">60</td>
+                        <td class="num">1,98</td>
+                        <td class="num">0</td>
+                    </tr>
+                                                        </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p class="site-footer__copy">
+                &copy; 2026                <a href="https://latamsquad.org" target="_blank" rel="noopener noreferrer">LATAMSQUAD</a>
+            </p>
+            <p class="site-footer__links">
+                <a href="/">Juegos</a>
+                                <span aria-hidden="true">·</span>
+                <a href="/pr?s=1">Inicio</a>
+                <span aria-hidden="true">·</span>
+                <a href="/ranking?s=1">Ranking</a>
+                <span aria-hidden="true">·</span>
+                <a href="/rangos?s=1">Rangos</a>
+                <span aria-hidden="true">·</span>
+                <a href="/clans?s=1">Clanes</a>
+                                <span aria-hidden="true">·</span>
+                <a href="https://discord.gg/latamsquad" target="_blank" rel="noopener noreferrer">Discord</a>
+            </p>
+        </div>
+    </footer>
+        <script src="/assets/js/server-tabs.js?v=20260716servertabpulse" defer></script>
+    </body>
+</html>
+    

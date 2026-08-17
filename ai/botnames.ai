@@ -1,0 +1,152 @@
+rem *** PR COOP AI Botnames ***
+rem
+rem Project Reality Red Tag Dev's
+rem
+aiSettings.addBotName [R-BOT] epoch
+aiSettings.addBotName [R-BOT] TheRealFritz
+aiSettings.addBotName [R-BOT] AncientMan
+aiSettings.addBotName [R-BOT] Twisted_Helix
+rem
+rem Project Reality Dev Managers Group
+rem
+aiSettings.addBotName [R-BOT] AfterDune
+aiSettings.addBotName [R-BOT] Amok@ndy
+aiSettings.addBotName [R-BOT] BloodyDeed
+aiSettings.addBotName [R-BOT] K4on
+aiSettings.addBotName [R-BOT] Mats391
+aiSettings.addBotName [R-BOT] Mineral
+aiSettings.addBotName [R-BOT] prbot
+aiSettings.addBotName [R-BOT] Spec
+rem
+rem Project Reality Dev's
+rem
+aiSettings.addBotName [R-BOT] -=anders=-
+aiSettings.addBotName [R-BOT] Adriaan
+aiSettings.addBotName [R-BOT] AFsoccer
+aiSettings.addBotName [R-BOT] Airsoft
+aiSettings.addBotName [R-BOT] Aleon
+aiSettings.addBotName [R-BOT] Alkali
+aiSettings.addBotName [R-BOT] AlonTavor
+aiSettings.addBotName [R-BOT] Arab
+aiSettings.addBotName [R-BOT] Ason
+aiSettings.addBotName [R-BOT] billoute
+aiSettings.addBotName [R-BOT] Bob_Marley
+aiSettings.addBotName [R-BOT] Brunitogg
+aiSettings.addBotName [R-BOT] camo
+aiSettings.addBotName [R-BOT] Chuc
+aiSettings.addBotName [R-BOT] CTRifle
+aiSettings.addBotName [R-BOT] dbzao
+aiSettings.addBotName [R-BOT] Dr_Rank
+aiSettings.addBotName [R-BOT] Gore
+aiSettings.addBotName [R-BOT] Guedoe
+aiSettings.addBotName [R-BOT] Hans_Martin_Slayer
+aiSettings.addBotName [R-BOT] Hauteclocque
+aiSettings.addBotName [R-BOT] Hokunin
+aiSettings.addBotName [R-BOT] J.F.Leusch69
+aiSettings.addBotName [R-BOT] Jafar_Ironclad
+aiSettings.addBotName [R-BOT] K_Rivers
+aiSettings.addBotName [R-BOT] M42_Zwilling
+aiSettings.addBotName [R-BOT] matty
+aiSettings.addBotName [R-BOT] Max_
+aiSettings.addBotName [R-BOT] Mectus
+aiSettings.addBotName [R-BOT] melonmuncher
+aiSettings.addBotName [R-BOT] Mosquill
+aiSettings.addBotName [R-BOT] motherdear
+aiSettings.addBotName [R-BOT] Mr.VdHeide
+aiSettings.addBotName [R-BOT] Ninja2dan
+aiSettings.addBotName [R-BOT] Nosferatu
+aiSettings.addBotName [R-BOT] Outlawz7
+aiSettings.addBotName [R-BOT] papadanku
+aiSettings.addBotName [R-BOT] piepieonline
+aiSettings.addBotName [R-BOT] pleym
+aiSettings.addBotName [R-BOT] Rabbit
+aiSettings.addBotName [R-BOT] Rhino
+aiSettings.addBotName [R-BOT] rpoxo
+aiSettings.addBotName [R-BOT] Rudd
+aiSettings.addBotName [R-BOT] Sabre-Oz
+aiSettings.addBotName [R-BOT] Senshi
+aiSettings.addBotName [R-BOT] ShrapGnoll
+aiSettings.addBotName [R-BOT] Sniperdog
+aiSettings.addBotName [R-BOT] Spush
+aiSettings.addBotName [R-BOT] Suchar
+aiSettings.addBotName [R-BOT] Tema567
+aiSettings.addBotName [R-BOT] Thermis
+aiSettings.addBotName [R-BOT] UTurista
+aiSettings.addBotName [R-BOT] VapoMan
+aiSettings.addBotName [R-BOT] Yosik
+aiSettings.addBotName [R-BOT] w0lf3k
+rem
+rem Project Reality Contributors
+rem
+aiSettings.addBotName [R-BOT] Aleon
+aiSettings.addBotName [R-BOT] Avram
+aiSettings.addBotName [R-BOT] .D0T
+aiSettings.addBotName [R-BOT] Bao
+aiSettings.addBotName [R-BOT] Chuva_RD
+aiSettings.addBotName [R-BOT] Double_13
+aiSettings.addBotName [R-BOT] Fastjack
+aiSettings.addBotName [R-BOT] Hans_Strudel
+aiSettings.addBotName [R-BOT] LangMaster
+aiSettings.addBotName [R-BOT] Lordas
+aiSettings.addBotName [R-BOT] Liam
+aiSettings.addBotName [R-BOT] Psyrus
+aiSettings.addBotName [R-BOT] rodrigoma
+aiSettings.addBotName [R-BOT] Snares
+aiSettings.addBotName [R-BOT] Spyker2041
+aiSettings.addBotName [R-BOT] sylent/shooter
+aiSettings.addBotName [R-BOT] Tomato-Rifle
+aiSettings.addBotName [R-BOT] Unicode
+aiSettings.addBotName [R-BOT] Wicca
+aiSettings.addBotName [R-BOT] Yrkidding
+aiSettings.addBotName [R-BOT] Zeee
+aiSettings.addBotName [R-BOT] CAS_ual_TY
+aiSettings.addBotName [R-BOT] Krayt
+aiSettings.addBotName [R-BOT] Multi
+rem
+rem Community Faction Leads
+rem
+aiSettings.addBotName [R-BOT] M.MCC
+aiSettings.addBotName [R-BOT] Arc_Shielder
+aiSettings.addBotName [R-BOT] ddeo
+aiSettings.addBotName [R-BOT] Glimmerman
+aiSettings.addBotName [R-BOT] H.sta
+aiSettings.addBotName [R-BOT] Hulabi
+aiSettings.addBotName [R-BOT] ismaelassassin
+rem
+rem Tech Support Team
+rem
+aiSettings.addBotName [R-BOT] Darkpowder
+aiSettings.addBotName [R-BOT] LITOralis.nMd
+aiSettings.addBotName [R-BOT] rushn
+aiSettings.addBotName [R-BOT] SnipingCoward
+aiSettings.addBotName [R-BOT] Bad_Nade
+rem
+rem Mods
+rem
+aiSettings.addBotName [R-BOT] BabylonCome
+aiSettings.addBotName [R-BOT] Cp
+aiSettings.addBotName [R-BOT] Dunehunter
+aiSettings.addBotName [R-BOT] IINoddyII
+aiSettings.addBotName [R-BOT] Jeepo
+aiSettings.addBotName [R-BOT] Jigsaw
+aiSettings.addBotName [R-BOT] Mongolian_dude
+aiSettings.addBotName [R-BOT] Saobh
+rem
+rem Special Alumni
+rem 
+aiSettings.addBotName [R-BOT] Outlaw22
+rem
+rem PR Testing Team
+rem
+aiSettings.addBotName [R-BOT] Avatok
+aiSettings.addBotName [R-BOT] Danesh_italiano
+aiSettings.addBotName [R-BOT] DonDOOM
+aiSettings.addBotName [R-BOT] FFG
+aiSettings.addBotName [R-BOT] Rotblut
+aiSettings.addBotName [R-BOT] SANGUE-RUIM
+aiSettings.addBotName [R-BOT] YAK-R
+aiSettings.addBotName [R-BOT] piratepengu
+aiSettings.addBotName [R-BOT] kenzzan
+aiSettings.addBotName [R-BOT] Deviro
+aiSettings.addBotName [R-BOT] B4ckp4k
+aiSettings.addBotName [R-BOT] Dr.Skull

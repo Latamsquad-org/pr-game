@@ -1,0 +1,13 @@
+airAttack.ai - experimental strategy `airAttackGround`: try to get air units to prefer attack ground targets over air targets.
+            \\
+              --> Doesn't seem to work!			
+
+focusedCounterAttack.ai - Max 1 attack with max Agression, triggered when enemy has more CPs && friendly tickets
+                   are 75% or less of enemy tickets && side has more Fronts than Safes
+
+protectBase.ai - Max 2 attacks with 3/4 Agression and hefty Owned `Base` modifier. Triggered when enemy has more CPs && friendly
+                 Base has at least one hostile neighbor && SAs that are `Front`s outnumber SAs that are `Safe`.
+
+userConditions.ai - Stock conditions ready for use inside user plugins. See `userConditions.txt` in the Docs folder
+                    for a full list and description of these conditions.
+

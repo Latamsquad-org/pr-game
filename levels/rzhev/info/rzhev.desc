@@ -1,0 +1,14 @@
+<map>
+	<name> Rzhev </name>
+	<music> common/sound/menu/music/load/unicode_rzhev.ogg </music>
+	<modes>
+		<mode type="gpm_cq">
+			<maptype players="64" type="aasfullassets" locid="GAMEMODE_DESCRIPTION_aasfullassets"></maptype>
+		</mode>
+		<mode type="gpm_coop">
+			<maptype ai="1" players="32" type="coopalternative" locid="GAMEMODE_DESCRIPTION_coopalternative"></maptype>
+			<maptype ai="1" players="64" type="coopfullassets" locid="GAMEMODE_DESCRIPTION_coopfullassets"></maptype>
+		</mode>
+	</modes>
+</map>
+

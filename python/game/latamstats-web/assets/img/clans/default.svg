@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Clan">
+  <!-- Logo por defecto — reemplazá este archivo o subí {slug}.png por clan -->
+  <rect width="128" height="128" rx="8" fill="#0c0c0c"/>
+  <path d="M64 14 L104 30 V60 C104 88 86 106 64 116 C42 106 24 88 24 60 V30 Z"
+        fill="none" stroke="#ff8000" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M64 30 L90 42 V60 C90 78 79 92 64 98 C49 92 38 78 38 60 V42 Z"
+        fill="#ff8000" opacity="0.2"/>
+  <circle cx="64" cy="58" r="16" fill="none" stroke="#ff8000" stroke-width="4"/>
+  <path d="M64 46 V70 M52 58 H76" stroke="#ff8000" stroke-width="4" stroke-linecap="round"/>
+</svg>

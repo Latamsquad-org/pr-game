@@ -1,0 +1,79 @@
+rem *** PRSP Ai v5 ***
+
+rem ** Create Conditions **
+
+aiStrategy.createConstantCondition AttackEnemyCPCond Crisp EqualGreater Enemy ControlPoint 1
+aiStrategy.setConditionStrength Advisory
+
+aiStrategy.createConstantCondition AttackEnemyAreaCond Crisp EqualGreater Enemy NumberOfHostileAreas 1
+aiStrategy.setConditionStrength Advisory
+
+aiStrategy.createConstantCondition AttackNeutralAreaCond Crisp EqualGreater Both NumberOfNeutralAreas 1
+aiStrategy.setConditionStrength Advisory
+
+aiStrategy.createConstantCondition noEnemyCond Crisp Equal Enemy ControlPoint 0
+aiStrategy.setConditionStrength Required
+
+aiStrategy.createConstantCondition noNeutralCond Crisp Equal Friendly NumberOfNeutralAreas 0
+aiStrategy.setConditionStrength Required
+
+rem *** Create Prerequisites ***
+
+aiStrategy.createPrerequisite AttackEnemyCPPrereq
+aiStrategy.addCondition AttackEnemyCPCond 20.0
+aiStrategy.addCondition AttackNeutralAreaCond 20.0
+
+aiStrategy.createPrerequisite AttackEnemyAreaPrereq
+aiStrategy.addCondition AttackEnemyAreaCond 20.0
+
+aiStrategy.createPrerequisite AttackNeutralAreaPrereq
+aiStrategy.addCondition AttackNeutralAreaCond 20.0
+
+aiStrategy.createPrerequisite DefendPrereq
+aiStrategy.addCondition noEnemyCond 2.0
+aiStrategy.addCondition noNeutralCond 2.0
+
+rem *** Create Strategies ***
+
+aiStrategy.createStrategy AttackEnemyCP
+aiStrategy.Aggression 1
+aiStrategy.NumberOfAttacks 4
+aiStrategy.NumberOfDefences 0
+aiStrategy.setStrategicObjectsModifier ControlPoint      15.0 Hostile
+aiStrategy.setStrategicObjectsModifier ControlPoint      20.0 Neutral
+aiStrategy.setPrerequisite AttackEnemyCPPrereq
+
+aiStrategy.createStrategy AttackEnemyArea
+aiStrategy.Aggression 1
+aiStrategy.NumberOfAttacks 4
+aiStrategy.NumberOfDefences 0
+aiStrategy.setStrategicObjectsModifier ControlPoint      15.0 Hostile
+aiStrategy.setStrategicObjectsModifier ControlPoint      20.0 Neutral
+aiStrategy.setPrerequisite AttackEnemyAreaPrereq
+
+aiStrategy.createStrategy AttackNeutralArea
+aiStrategy.Aggression 1
+aiStrategy.NumberOfAttacks 4
+aiStrategy.NumberOfDefences 0
+aiStrategy.setStrategicObjectsModifier ControlPoint      15.0 Hostile
+aiStrategy.setStrategicObjectsModifier ControlPoint      20.0 Neutral
+aiStrategy.setPrerequisite AttackNeutralAreaPrereq
+
+aiStrategy.createStrategy Defend
+aiStrategy.Aggression 1
+aiStrategy.NumberOfAttacks 3
+aiStrategy.NumberOfDefences 2
+aiStrategy.setStrategicObjectsModifier ControlPoint      20.0 Hostile
+aiStrategy.setStrategicObjectsModifier ControlPoint      40.0 Owned
+aiStrategy.setPrerequisite DefendPrereq
+
+
+
+rem *** Add Strategies ***
+
+rem --- DO THIS IN LEVEL SPECIFIC FILES ---
+
+rem --- TODO: ADD LOGIC TO ADD DIFFERENT STRATEGIES FOR DIFFERENT GAMEMODES ---
+
+
+rem **********************************************************************

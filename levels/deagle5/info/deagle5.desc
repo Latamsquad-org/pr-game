@@ -1,0 +1,9 @@
+<map>
+	<name> Deagle5 </name>
+	<music> common/sound/menu/music/load/op_mar_music.ogg </music>
+	<modes>
+		<mode type="gpm_gungame">
+			<maptype players="16" type="gungame" locid="GAMEMODE_DESCRIPTION_gungame"></maptype>
+		</mode>
+	</modes>
+</map>
