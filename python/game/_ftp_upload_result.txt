@@ -1,6 +1,0 @@
-﻿UPLOAD includes/layout.php exit=0 size=10504 err=
-UPLOAD assets/css/main.css exit=0 size=37519 err=
-UPLOAD pr.php exit=0 size=17662 err=
-UPLOAD ranking.php exit=0 size=17952 err=
-UPLOAD clans.php exit=0 size=28248 err=
-UPLOAD rangos.php exit=0 size=5288 err=

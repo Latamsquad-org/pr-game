@@ -7215,7 +7215,6 @@ ce64136960f94ae7a6faf9fc4bf96f44 perm Saiintt REALITYMOD MASTERSERVER - Global b
 (File manipulation/cheating)
 8f4a450196ac4c76ae7b351484690a04 perm BoundCone ghosting Debes apelar en discord.gg/latamsquad o latamsquad.org
 9cb9699954fa4ec3ac4b0ca44bf4cf0d perm Triskai tk MATAR A CAS ALIADO Debes apelar en discord.gg/latamsquad o latamsquad.org
-4238112f0af04e97975aedecda938669 perm SKORPION-95-Regi troll Debes apelar en discord.gg/latamsquad o latamsquad.org
 9d32f834502c4f0f9818e027a9bf36e0 perm MANUALLY BANNED ID xiter/cheater Debes apelar en discord.gg/latamsquad o latamsquad.org
 2aed01696f4d470eb9cfcfea51d2d56a perm (0.o) Nomadf Hacks
 b48bf26fab3c4a36b68267f53497c27f perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
@@ -7524,7 +7523,9 @@ a22e192b72c844b2ba2467fecd7b5f9e perm Name not found. REALITYMOD MASTERSERVER - 
 8615cd5df1e8412e8227480b74aee6be perm (0.o) aestethicSupreme Uso de trampas para beneficiarse a la hora de jugar
 89bb856a6dce48dd95475e4ae5bcafe5 timeban Detestant Cualquier tipo de racismo no sera tolerado en este server, cuida tus palabras o seras baneado Debes apelar en discord.gg/latamsquad
 564f88e965fe484eb06192f70ee07dfd timeban E-LAM cristian1 glitch intencional con fob para esconderse dentro de edificio Debes apelar en discord.gg/latamsquad
-df57d897e90740319c77fe5ab6a78d35 perm Intoxicado REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
 b9b9913ae684474bbe2ee24aba91627e perm MANUALLY BANNED ID evasion de ban
-4109bebef5c44725a9da5aa5812bba11 timeban DerTod impericia Debes apelar en discord.gg/latamsquad
-bebfa9869d264a08a40b1b789e845a29 timeban DoubleBarrel troll Debes apelar en discord.gg/latamsquad
+44acae5b24014a908c3f9cce6a396e06 timeban cariocasemmic Cualquier tipo de racismo no sera tolerado en este server, cuida tus palabras o seras baneado Debes apelar en discord.gg/latamsquad
+5db210318abc4219a3cd97ad989223cc timeban BRAVO] elvasko098 griefing y ghosting Debes apelar en discord.gg/latamsquad
+50a96537e10f41ee955d5fbad4498b20 timeban labaaishon impericia Debes apelar en discord.gg/latamsquad
+5420d5ed94c0468e9f0c595f12a2bb17 timeban alexis.1p Estrello trans con cas aliado Debes apelar en discord.gg/latamsquad
+30682ef1052648619e06236fc6a4605b perm yousff999 troll main. Debes apelar en discord.gg/latamsquad
