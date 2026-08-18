@@ -1,4 +1,3 @@
-# Embedded file name: realityvehicles.py
 import math
 import random
 import bf2
@@ -96,6 +95,28 @@ def onEnterVehicleInitialize(player, seatVehicle, freeSoldier = False):
 
 getFirstEmptySeatAntiSpam = {}
 
+def _resolveSeatIndex(vehicle, seats):
+    # Prefer the PCO id assigned on enter. If the current object is not a seat
+    # (child part, turret, etc), walk parents and match against known seats.
+    if vehicle is None or not seats:
+        return None
+    if hasattr(vehicle, 'pcoid'):
+        try:
+            return int(vehicle.pcoid)
+        except:
+            pass
+    cursor = vehicle
+    while cursor is not None:
+        for i in range(len(seats)):
+            if seats[i] is cursor:
+                return i
+        try:
+            cursor = cursor.getParent()
+        except:
+            return None
+    return None
+
+
 def getFirstEmptySeat(playerid):
     try:
         debug_templateName = 'TEMPLATE NAME NOT FOUND'
@@ -103,18 +124,26 @@ def getFirstEmptySeat(playerid):
         if playerid in getFirstEmptySeatAntiSpam and getFirstEmptySeatAntiSpam[playerid][0] + CYCLE_SEAT_COOLDOWN > now:
             return getFirstEmptySeatAntiSpam[playerid][1]
         player = bf2.playerManager.getPlayerByIndex(playerid)
+        if player is None:
+            return 0
         if player.isAIPlayer():
             return 7
         vehicle = player.getVehicle()
+        if vehicle is None:
+            return 0
         if hasattr(vehicle, 'templateName'):
             debug_templateName = vehicle.templateName
         root = getRoot(vehicle)
-        if not hasattr(root, '_seats'):
+        if root is None or not hasattr(root, '_seats') or not root._seats:
             return 0
-        myindex = vehicle.pcoid
-        for index in range(myindex + 1, myindex + len(root._seats)):
-            index = index % len(root._seats)
-            seat = root._seats[index]
+        seats = root._seats
+        myindex = _resolveSeatIndex(vehicle, seats)
+        if myindex is None:
+            return 0
+        seatCount = len(seats)
+        for index in range(myindex + 1, myindex + seatCount):
+            index = index % seatCount
+            seat = seats[index]
             if not hasattr(seat, 'currentPlayer') or seat.currentPlayer is None:
                 rdebug.debugMessage('Selected Seat %s' % index)
                 getFirstEmptySeatAntiSpam[playerid] = (now, index)
