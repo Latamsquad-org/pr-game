@@ -353,7 +353,7 @@ adm_adminHashes = {
     "f5064ec675ad4d90aa824da880de03ae":    1,    # Aatrix_          --Administrador
     "36c05356ab2d4738909810f41ac649d6":    1,    # Algama           --Administrador
     "bcf835f6633f40888d5e33055e7cb511":    1,    # binkydadrinky    --Administrador
-    "fe90b83b662547c89d942d7580d77433":    2,    # C.M]NICO         --Moderador
+    "fe90b83b662547c89d942d7580d77433":    1,    # C.M]NICO         --Moderador
     "0e09df30a7cd440983c22f8e2fefe9b3":    1,    # Calestic-.       --Administrador
     "e91963580cab4c5995570164b4a0dc4e":    1,    # Chaman           --Administrador
     "792eb21803b84249a43c27752f9bd0e7":    0,    # Chaziz           --Directivo

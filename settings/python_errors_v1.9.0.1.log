@@ -1,0 +1,5 @@
+[2026-08-17 21:54:33] GameStatus: 3
+	EXCEPTION: AttributeError'>
+	Object instance has no attribute 'pcoid'
+	Trace:
+		mods/pr/python\game\realityvehicles.py on line 114
