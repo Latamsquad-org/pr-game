@@ -3645,6 +3645,7 @@ def getTimeToBan(timeToBan):
 def commandRoundBan(args, p):
     if len(args) != 2:
         personalMessage('Modo de uso: !roundban playername reason', p)
+        return False
     return commandTimeBan((args[0], 'round', ' '.join(args[1:])), p)
 
 
