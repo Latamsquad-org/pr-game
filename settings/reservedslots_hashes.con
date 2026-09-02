@@ -1,0 +1,29 @@
+rem Slots reservados por hash CD-key (32 hex). Mensaje opcional = saludo al spawn.
+rem El motor BF2 solo entiende addNick; latamvips.py aplica el acceso por hash.
+
+rem Administradores
+reservedSlots.addHash "0161096bb0984d11bccc7f6f776e2e82"
+reservedSlots.addHash "f5064ec675ad4d90aa824da880de03ae"
+reservedSlots.addHash "36c05356ab2d4738909810f41ac649d6"
+reservedSlots.addHash "bcf835f6633f40888d5e33055e7cb511"
+reservedSlots.addHash "fe90b83b662547c89d942d7580d77433"
+reservedSlots.addHash "0e09df30a7cd440983c22f8e2fefe9b3"
+reservedSlots.addHash "e91963580cab4c5995570164b4a0dc4e"
+reservedSlots.addHash "792eb21803b84249a43c27752f9bd0e7" "Ha llegado el lechero de Chaziz!"
+reservedSlots.addHash "4d070fb29faf4d27844d93535c8ba5ee"
+reservedSlots.addHash "57b9f059e7744f248a98d98a498cb8a5"
+reservedSlots.addHash "e3bbb6de64c74a0eaf2388d32554649c"
+reservedSlots.addHash "d002935d835745599d30d4d2e94feb53"
+reservedSlots.addHash "905d96703b3a43f7bd00e351eca9ba6d"
+reservedSlots.addHash "6e707951874e4f3ba8fe3a398ff580c4"
+reservedSlots.addHash "6da8d35fd158481e8f0e8e7195781c06"
+reservedSlots.addHash "97918d9fd1d74a93b0dddb132c570264"
+reservedSlots.addHash "5106ccbe505548d1b446c358cdd9b5d9"
+reservedSlots.addHash "bf62777a89d6499ea0badf2284839cc6"
+reservedSlots.addHash "025a490b9cfe4b028a92f4aec5899037"
+reservedSlots.addHash "566f70f624fe407784ddd394319b9473"
+reservedSlots.addHash "501eb007fef44c8ead5c951c03740991"
+reservedSlots.addHash "bc0b80c909d24bfd97008d196b1be294"
+
+rem Jugadores VIP
+reservedSlots.addHash "5e2e514f66554776b4a8b2ff7c2186d6"
