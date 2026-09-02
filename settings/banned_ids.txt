@@ -2356,8 +2356,6 @@ bad4b04c95e14c9f886400b57c0d4633 perm ARAUJO081 REALITYMOD MASTERSERVER - Global
 (File manipulation/cheating)
 8c97936d65b741cd957935ec52d4c7d0 perm Name not found. REALITYMOD MASTERSERVER - Global ban. 
 (File manipulation/cheating)
-9f6e334d10584d378951e070259cf8c2 perm evilinvictus REALITYMOD MASTERSERVER - Global ban. 
-(File manipulation/cheating)
 d5612494f7d44da2a349e52a30232fb9 perm Name not found. REALITYMOD MASTERSERVER - Global ban. 
 (File manipulation/cheating)
 417bbbba4afd425e86c514387711be1f perm Name not found. REALITYMOD MASTERSERVER - Global ban. 
@@ -6957,7 +6955,6 @@ bb6a79095b5349fb82d43f63172ef938 perm Dutchh trollplayer Debes apelar en discord
 319ac77abe954ed3bf5fee0b6dcbe277 perm MANUALLY BANNED ID evadir ban
 ca41254a95384c50b221c9dd934e20d1 perm Nyzarkkkj trolling main Debes apelar en discord.gg/latamsquad o latamsquad.org
 619d8d509edb48f7b3adb6da6b0f5820 perm riankkjk trolling Debes apelar en discord.gg/latamsquad o latamsquad.org
-ecb63bae8be64e38b6e75a3c595a1c26 perm MANUALLY BANNED ID troll
 5733f5c43f6142dab019a16cc37cc7e3 perm MANUALLY BANNED ID mc
 f16d6f517aa24569a8473977a6afcf3d perm MANUALLY BANNED ID mc
 9312046014554041bac7ff82221bba08 perm benja244arg troll Debes apelar en discord.gg/latamsquad o latamsquad.org
@@ -7522,11 +7519,72 @@ a22e192b72c844b2ba2467fecd7b5f9e perm Name not found. REALITYMOD MASTERSERVER - 
 50d9c1defb0e4bcf88e86a7ee24be3cf perm =ICTS=AWIKY REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
 8615cd5df1e8412e8227480b74aee6be perm (0.o) aestethicSupreme Uso de trampas para beneficiarse a la hora de jugar
 89bb856a6dce48dd95475e4ae5bcafe5 timeban Detestant Cualquier tipo de racismo no sera tolerado en este server, cuida tus palabras o seras baneado Debes apelar en discord.gg/latamsquad
-564f88e965fe484eb06192f70ee07dfd timeban E-LAM cristian1 glitch intencional con fob para esconderse dentro de edificio Debes apelar en discord.gg/latamsquad
 b9b9913ae684474bbe2ee24aba91627e perm MANUALLY BANNED ID evasion de ban
 44acae5b24014a908c3f9cce6a396e06 timeban cariocasemmic Cualquier tipo de racismo no sera tolerado en este server, cuida tus palabras o seras baneado Debes apelar en discord.gg/latamsquad
-5db210318abc4219a3cd97ad989223cc timeban BRAVO] elvasko098 griefing y ghosting Debes apelar en discord.gg/latamsquad
-50a96537e10f41ee955d5fbad4498b20 timeban labaaishon impericia Debes apelar en discord.gg/latamsquad
-5420d5ed94c0468e9f0c595f12a2bb17 timeban alexis.1p Estrello trans con cas aliado Debes apelar en discord.gg/latamsquad
 30682ef1052648619e06236fc6a4605b perm yousff999 troll main. Debes apelar en discord.gg/latamsquad
-19dd3620424e437a8962c82659afd870 timeban  SemEpipem destruccion de posiciones aliadas Debes apelar en discord.gg/latamsquad
+031e16cc67554a1fab222efed276f7e2 timeban [TSS] TheSilentSniper desperdicio de activos y xenofobia Debes apelar en discord.gg/latamsquad
+1008bb28987a481eaa7620428903286c perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+b236409a9ea6402ea94fab35b0b49b88 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+fd594e87ec7c465b99817a81baf20028 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+89ebbd24f0c8452a9de53b91cab87c4b perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+c2c2b918dba14f80ac85833f057ff32c perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+54aa9e583d484c538212bb4bebfe4817 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+b6b72e3fc8b7415cb4ec7b49bca901de perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+d42a0826cf5a4512a2b95fe2c4236602 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+1da0ce2bffa94aad8a98046d90fe4f2a perm =IED=AboKhalid REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+f3b805b2b21b49bd9b1cb68d6326e89e perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+acafb69b95534195b1c2b4004acbcc97 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+068e59d4f0eb40ceb93c44a772e7c7a3 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+dc088b1281854470ac1e64dfa424f447 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+3cb619e5c8fd49c0b81da8654d02474b perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+0b8105f2b6a040be81d4b4f0fc038431 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+05f28150a7214b2b9f1a255d98f03b4f perm  colbaskamiratorg REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+9f6e334d10584d378951e070259cf8c2 perm evilinvictus REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+6e77b3931ea24a6f93acc9ab98eb5587 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+b7793b3ea61c46689b4fdb83defc80c3 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+59945301b0374c72a243925dbcc1fad2 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+21a998ec9f84404db2919613343fa7f5 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+17c83c36b09c4ea795d7bcf89b220174 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+b4b20f3d856e42469d7aa44264dd4595 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+c7830c1078b2460ba632b2a70cd2d457 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+d1c1249b4d0744afaefa062c1ee91b4e perm  Sisisi REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+1281b3ec8a5244888779167d661f9db7 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+c67ffffba81e4431b2e6c913d0ad9748 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+4adb3c93a5fd4a95af1145b8b79a3341 perm Dante12 REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+908269b055ab4a9fb5cbffc943a75d12 perm 777 gandis77 REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+be88c83614bc495483329e47c6beb71e perm pablo58 REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+31447d0219c9436084285ba86be1185d perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+655451fd670c45d9ad9c35aa801ae22d perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+df57d897e90740319c77fe5ab6a78d35 perm Intoxicado REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+89bc30a2e7214287b7b76274f0d5aae5 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+f922b611e80f47fe8d10bbdc5b3637db perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+816db1193bfe4d4a8971795d4b90f2c6 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+a9918b353c5244c2829ca61c3d05b194 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+e9dc7e02d2b248ec9c71b35c399c14a7 perm  BigBoobsLover REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+1230a7fe6d8d42f2aba20c3c75f84849 perm TUNTUNSAHUR67 REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+53344b487d1645818f3bf3eacc12c838 perm  Oidetee REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+e4fdaa12b386462f83fda7891a4edf5b perm Dword0 REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+2458c49c4318435585aa724044c9cca6 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+4da33d1510d942bbbce76cc0881218e1 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+347657497513432aa8e02150c970807c perm Chango! REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+34b5da08463d48b8b3398d4a6a8b60a7 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+bb1567526abe4a5d8e4fd655feec4427 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+60027ad93ac94c909fc7e1845581bd9d perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+dd195bda195f41c6b047bfec9bc0c0c3 perm RedZeiss REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+35b1b72e5b874cd6a526040fe38ec820 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+ca8e6c21f5074cacb972a4e8c872597d perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+d4b8e14feebc499d8fda6a9cad18a673 perm  JoeNae REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+2d870759b4aa428bb005193c847e669d perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+6c43304acdfe427d8a6046983a6b43f9 perm Stg_Oliveira REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+b5e1313604444bf69ad6a48cd05506a4 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+6c2c4726fc2d4ca5ae443df92070321a perm nazo1312 REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+fb6269bd41b54d54ba17858278be9a20 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+ffc1d104809a4505ae16361b1511c648 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+532662ea54514e96bbb9a848edba1025 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+b8ad04df77614923845008b5e75bb519 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+c8eb3f9aabe043a5b9c9092af8acae1d perm UrWifesBoyfriend REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+56b1e89d9e9b4e81b8ec308859afae5b perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+988e267a2b3f4575b8622604a78357e4 perm Name not found. REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+aa47116c9afc4e07877e60a4bd9071fd perm  papazit REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+b087fa0f070f4b08a7284e5890311cc5 perm  Dave_LAF REALITYMOD MASTERSERVER - Global ban. REASON: File manipulation/cheat injection.
+35d42dd7fa2c4afaa588c3d9f007c743 timeban SHADOW_[249] impericia y kitear ara evadir ban Debes apelar en discord.gg/latamsquad

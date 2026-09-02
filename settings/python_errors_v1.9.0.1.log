@@ -1,5 +1,7 @@
-[2026-08-17 21:54:33] GameStatus: 3
+[2026-08-23 21:51:25] GameStatus: 3
 	EXCEPTION: AttributeError'>
-	Object instance has no attribute 'pcoid'
+	Object instance has no attribute 'isValid'
 	Trace:
-		mods/pr/python\game\realityvehicles.py on line 114
+		realityevents.py on line 443
+		mods/pr/python\game\realitybouncer.py on line 335
+		mods/pr/python\game\realitybouncer.py on line 216

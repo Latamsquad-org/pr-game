@@ -21,4 +21,5 @@ import latamlink
 import latambots_scale
 import latamtrackersummary
 import latamlocalvoice
+import latamvips
 import latamac

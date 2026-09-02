@@ -353,12 +353,12 @@ adm_adminHashes = {
     "f5064ec675ad4d90aa824da880de03ae":    1,    # Aatrix_          --Administrador
     "36c05356ab2d4738909810f41ac649d6":    1,    # Algama           --Administrador
     "bcf835f6633f40888d5e33055e7cb511":    1,    # binkydadrinky    --Administrador
-    "fe90b83b662547c89d942d7580d77433":    1,    # C.M]NICO         --Moderador
+    "fe90b83b662547c89d942d7580d77433":    1,    # C.M]NICO         --Administrador
     "0e09df30a7cd440983c22f8e2fefe9b3":    1,    # Calestic-.       --Administrador
     "e91963580cab4c5995570164b4a0dc4e":    1,    # Chaman           --Administrador
     "792eb21803b84249a43c27752f9bd0e7":    0,    # Chaziz           --Directivo
     "4d070fb29faf4d27844d93535c8ba5ee":    1,    # CHEINFIERNO      --Administrador   
-    "57b9f059e7744f248a98d98a498cb8a5":    1,    # Enzo.             --Administrador
+    "57b9f059e7744f248a98d98a498cb8a5":    1,    # Enzo.            --Administrador
     "e3bbb6de64c74a0eaf2388d32554649c":    1,    # EclipseS         --Administrador
     "d002935d835745599d30d4d2e94feb53":    1,    # Foice            --Administrador
     "905d96703b3a43f7bd00e351eca9ba6d":    1,    # halocapo177      --Administrador

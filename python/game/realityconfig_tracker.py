@@ -14,7 +14,7 @@ C['ENABLE'] = True
 # TRACKER UPDATE INTERVAL
 # Every [UPDATE_INTERVAL] the server calls an update that function that collects all the relevant
 # data from the server and writes it to a file
-C['UPDATE_INTERVAL'] = 0.0333
+C['UPDATE_INTERVAL'] = 0.3
 
 # ================= Local work mode settings
 

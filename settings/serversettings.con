@@ -21,8 +21,8 @@ sv.sponsorLogoURL "https://i.imgur.com/gff42tT.png"
 rem Logo displayed in server browser
 sv.communityLogoURL "https://i.imgur.com/gff42tT.png"
 
-sv.allowFreeCam 1
-sv.allowExternalViews 1
+sv.allowFreeCam 0
+sv.allowExternalViews 0
 sv.allowNoseCam 0
 sv.hitIndicator 0
 sv.maxPlayers 100
