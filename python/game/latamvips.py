@@ -13,11 +13,13 @@ except ImportError:
     realityserver = None
     _IN_GAME = False
 
-# reservedSlots.addHash "hash32hex" ["Mensaje opcional"]
+# reservedSlots.addHash "hash32hex" ["Mensaje opcional"] rem Nombre
 _ADD_HASH_RE = re.compile(
     r'reservedSlots\.addHash\s+"([0-9a-fA-F]{32})"(?:\s+"([^"]*)")?',
     re.IGNORECASE,
 )
+# Quita comentario rem al final de la linea (solo para humanos, no para el motor).
+_TRAILING_REM_RE = re.compile(r'\s+rem\s+.*$', re.IGNORECASE)
 
 _vip_hashes = set()
 _vip_messages = {}
@@ -25,6 +27,87 @@ _vip_messages = {}
 
 def _hashes_path():
     return '%s/settings/reservedslots_hashes.con' % host.sgl_getModDirectory()
+
+
+def _safe_comment_name(name):
+    """Nombre limpio para comentario rem (ASCII printable, sin saltos)."""
+    if name is None:
+        return ''
+    text = str(name).replace('\r', ' ').replace('\n', ' ').strip()
+    cleaned = []
+    for ch in text:
+        o = ord(ch)
+        if 32 <= o <= 126:
+            cleaned.append(ch)
+        else:
+            cleaned.append('?')
+    return ''.join(cleaned).strip()
+
+
+def _build_hash_line(player_hash, message, player_name):
+    """Arma la linea addHash con mensaje opcional y rem Nombre."""
+    line = 'reservedSlots.addHash "%s"' % player_hash
+    if message:
+        line = '%s "%s"' % (line, message)
+    comment_name = _safe_comment_name(player_name)
+    if comment_name:
+        line = '%s rem %s' % (line, comment_name)
+    return line
+
+
+def annotate_hash_name(player_hash, player_name):
+    """
+    Actualiza reservedslots_hashes.con poniendo rem Nombre en la linea del hash.
+    Solo para consulta humana; el parser ignora el rem al final.
+    """
+    if not player_hash or not player_name:
+        return False
+    player_hash = str(player_hash).lower()
+    path = _hashes_path()
+    try:
+        handle = open(path, 'r')
+        raw_lines = handle.readlines()
+        handle.close()
+    except IOError:
+        return False
+
+    changed = False
+    new_lines = []
+    for raw in raw_lines:
+        stripped = raw.strip()
+        if not stripped or stripped.lower().startswith('rem'):
+            new_lines.append(raw)
+            continue
+        match = _ADD_HASH_RE.search(stripped)
+        if not match or match.group(1).lower() != player_hash:
+            new_lines.append(raw)
+            continue
+        message = match.group(2)
+        if message is not None:
+            message = message.strip()
+        else:
+            message = ''
+        new_content = _build_hash_line(player_hash, message, player_name)
+        # Conserva salto de linea original si existia.
+        if raw.endswith('\r\n'):
+            ending = '\r\n'
+        elif raw.endswith('\n'):
+            ending = '\n'
+        else:
+            ending = ''
+        if stripped != new_content:
+            changed = True
+        new_lines.append(new_content + ending)
+
+    if not changed:
+        return False
+    try:
+        handle = open(path, 'w')
+        handle.writelines(new_lines)
+        handle.close()
+    except IOError:
+        return False
+    return True
 
 
 def load_vip_hashes():
@@ -44,6 +127,8 @@ def load_vip_hashes():
             line = raw_line.strip()
             if not line or line.lower().startswith('rem'):
                 continue
+            # Ignora rem Nombre al final de la linea addHash.
+            line = _TRAILING_REM_RE.sub('', line).strip()
             match = _ADD_HASH_RE.search(line)
             if not match:
                 continue
@@ -127,6 +212,11 @@ def on_player_connect(player):
     if _is_vip_hash(player_hash):
         player.latamvip_reserved = True
         _register_engine_nick(player)
+        # Anota el nombre en el .con (comentario rem) para consulta humana.
+        try:
+            annotate_hash_name(player_hash, player.getName())
+        except Exception:
+            pass
         return
     player.latamvip_reserved = False
     open_slots = _open_slot_limit()
